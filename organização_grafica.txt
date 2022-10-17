@@ -1,0 +1,9 @@
+nesse projeto vamos utizar:
+
+fonte - @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); - 'Roboto', sans-serif
+tamanho fonte - entre 17 a 25px
+
+cor primaria - #0734F2 (texto white)
+cor secundaria - #F2B707 (texto black)
+
+tamanho de cabeçalho e rodapé - height = 90px, wheight = 100%

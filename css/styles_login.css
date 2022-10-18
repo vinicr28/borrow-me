@@ -3,7 +3,7 @@
 * {
     padding: 0px;
     margin: 0px;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 header {
@@ -14,7 +14,6 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.35);
-    
 }
 
 #logo {

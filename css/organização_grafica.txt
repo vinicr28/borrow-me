@@ -3,6 +3,9 @@ nesse projeto vamos utizar:
 fonte - @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); - 'Roboto', sans-serif
 tamanho fonte - entre 17 a 25px
 
+font1 - @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+font-family: 'Poppins', sans-serif;
+
 cor primaria - #0734F2 (texto white)
 cor secundaria - #F2B707 (texto black)
 

@@ -41,11 +41,27 @@ header {
     padding: 10px;
 }
 
+.menu > a {
+    text-decoration: none;
+}
+
+.menu > a:visited {
+    color: white;
+}
+
 .menu:hover {
     transform: scale(1.10);
     color: #F2B707;
     transition: all 100ms ease-in;
 }
+
+.menu > a:visited:hover {
+    transform: scale(1.10);
+    color: #F2B707;
+    transition: all 100ms ease-in;
+}
+
+
 
 .banner {
     background-image: url('https://ead.pucpr.br/hubfs/pucpr_E4_campanha2_A_bannersite_1600x400.png');

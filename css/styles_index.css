@@ -28,7 +28,7 @@ header {
 .lista_menu {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;    
 }
 
 .menu {
@@ -64,11 +64,11 @@ header {
 
 
 .banner {
-    background-image: url('https://ead.pucpr.br/hubfs/pucpr_E4_campanha2_A_bannersite_1600x400.png');
+    background-image: url('../media/banners/banners_games.png');
     background-position: 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 600px;
+    background-size: auto;
+    max-width: 100%;
+    height: 400px;
     box-shadow: inset 0 8px 6px -2px rgba(0, 0, 0, 0.35);
     
 }

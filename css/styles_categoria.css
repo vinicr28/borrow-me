@@ -19,7 +19,6 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.35);
 }
 
 .nav_menu {
@@ -42,13 +41,19 @@ header {
     padding: 10px;
 }
 
+.menu > a {
+    color: white;
+    text-decoration: none;
+
+}
+
 .menu:hover {
     transform: scale(1.10);
     color: #F2B707;
     transition: all 100ms ease-in;
 }
 
-.text_automoveis {
+.text_locacoes {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 35px;
@@ -57,7 +62,7 @@ header {
     margin: 40px;
 }
 
-.automoveis {
+.locacoes {
     margin-top: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -66,7 +71,7 @@ header {
     grid-gap: 10px;
 }
 
-.item_automoveis {
+.item_locacoes {
     border: 1px solid #ddd ;
     border-radius: 5px;
     overflow: hidden;
@@ -74,7 +79,7 @@ header {
     box-shadow: inset 0 8px 6px -2px rgba(0, 0, 0, 0.35);
 }
 
-.img_automoveis {
+.img_locacoes {
     height: 200px;
     background-position: center;
     background-size: cover;

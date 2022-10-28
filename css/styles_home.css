@@ -32,16 +32,19 @@ main {
 
 #main__banner {
     max-height: 400px;
+
 }
 
 .main__banner__carrossel {
-    max-width: 100%;
+    width: 100%;
     height: 400px;
     box-shadow: inset 0 8px 6px -2px rgba(0, 0, 0, 0.35);
+    margin-bottom: 7%;
 }
 
 .main__banner__carrossel__imagem {
     max-width: 100%;
+    min-width: 100%;
 }
 
 #main__quemsomos {

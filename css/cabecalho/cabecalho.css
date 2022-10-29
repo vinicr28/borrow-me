@@ -3,7 +3,7 @@ header {
     top: 0;
     width: 100%;
     height: 90px;
-    background-color: #0734F2;
+    background-color: var(--azulEscuro);
     z-index: 3;
     box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.35);
 }
@@ -37,7 +37,7 @@ header {
 }
 
 .menu__lista__item {
-    color: white;
+    color: var(--brancoAbsoluto);
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font-size: 1.25rem;
@@ -48,7 +48,7 @@ header {
 }
 
 .menu__lista__item > a {
-    color: white;
+    color: var(--brancoAbsoluto);
 }
 
 
@@ -58,7 +58,7 @@ header {
 }
 
 .menu__lista__item > a:hover { /* Troca a cor*/
-    color: #F2B707;
+    color: var(--amareloPrincipal);
 }
 
 

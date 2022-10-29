@@ -3,9 +3,9 @@
 :root {
     scroll-behavior: smooth;
     --azulEscuro: #0734F2;
-    --brancoAbsoluto: #FEFEFE;
-    --brancoAmeno: #FCFCFC;
-    --amareloPrincipal: ##F2B707;
+    --brancoAbsoluto: #FFFFFF;
+    --brancoAmeno: #FBFBFB;
+    --amareloPrincipal: #F2B707;
 }
 
 

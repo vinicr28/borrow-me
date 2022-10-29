@@ -1,0 +1,50 @@
+.div-container__grades {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-grades__item {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 33.33%;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.div-grades__item:hover {
+    transform: scale(1.10);
+    transition: all 100ms ease-in;
+}
+
+.div-grades__item__areatexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.div-grades__item__areatexto > div {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+
+
+
+

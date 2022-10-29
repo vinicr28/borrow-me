@@ -4,19 +4,42 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Borrow.me login</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <title>Borrow.me</title>
+
+        <!-- FAVICON -->
+        <link rel="apple-touch-icon" sizes="180x180" href="medias/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="medias/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="medias/favicon/favicon-16x16.png">
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/titulos/titulos.css">
+        <link rel="stylesheet" href="../css/botoes.css">
+        <link rel="stylesheet" href="../css/boxes/cards.css">
+        <link rel="stylesheet" href="../css/boxes/fichas.css">
+        <link rel="stylesheet" href="../css/boxes/grades.css">
+        <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
+        <link rel="stylesheet" href="../css/rodape/rodape.css">
+        <link rel="stylesheet" href="../css/titulos/titulos.css">
         <link rel="stylesheet" href="../css/styles_login.css"/>
     </head>
     <body>
+        <!-- CABEÇALHO -->
         <header>
-            <img id="logo" src="../media/1.png"/>
+            <div class="container-cabecalho">
+
+                <div class="container-cabecalho__logo">
+                    <img class="cabecalho__logo__imagem" src="../medias/logo/1.png"/>
+                </div>
+
+            </div>
         </header>
+        <!-- TÉRMINO CABEÇALHO-->
 
         <section class="formulario">
-            <form method="get" action="../index.html">
+            <form method="get" action="home.html">
                 <div>
                     <h1>Faça Seu login</h1>  
                 </div>
@@ -29,20 +52,25 @@
                     <input type="password" placeholder="Digite a Senha" name="senha:" required/> 
                 </div>
                 <div class="button_login">
-                    <a onclick href="./index.html">
+                    <a onclick href="home.html">
                         <input type="submit" value="Entrar"/>
                     </a>
                 </div>
                 <div class="clique_aqui">
-                    <span>Não tem cadastro? <a href="./cadastro.html" style="color:#F2B707;">Clique aqui</a> </span>
+                    <span>Não tem cadastro? <a href="./criar-novaconta.html" style="color:#F2B707;">Clique aqui</a> </span>
                 </div>
             </form>
         </section>
+
         <footer>
-            <img id="logo_footer" src="../media/1.png"/>
-            <div>
-                <span>todos os direitos reservados ©</span>
-                <span>desenvolvido por: Equipe 128 Turma 4</span>
+            <div class="container-rodape">
+                <div class="container-rodape__imagem">
+                    <img class="rodape__imagem" src="../medias/logo/1.png"/>
+                </div>
+                <div class="container-rodape__descricao">
+                    <span>todos os direitos reservados ©</span>
+                    <span>desenvolvido por: Equipe 128 Turma 4</span>
+                </div>
             </div>
         </footer>
     </body>

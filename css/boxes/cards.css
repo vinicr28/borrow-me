@@ -1,0 +1,41 @@
+.div-container__cards {
+    margin-top: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.div-cards__item {
+    border: 1px solid #ddd ;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: inset 0 8px 6px -2px rgba(0, 0, 0, 0.35);
+}
+
+.div-cards__item__imagem {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.cards__item__titulos {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    margin: 1rem auto;
+}
+
+.cards__item__price {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.cards__item__descricao {
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+

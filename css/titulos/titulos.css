@@ -1,0 +1,22 @@
+.titulosh2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem;
+}
+
+.titulosh3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem;
+}
+
+.titulosh4 {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 1rem;   
+}

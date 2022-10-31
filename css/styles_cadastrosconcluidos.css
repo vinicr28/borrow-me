@@ -1,0 +1,17 @@
+.secoes-cadastrosconcluidos {
+    display: flex;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.div-box-cadastrosconcluidos {
+    background-color: var(--brancoAmeno);
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 60%;
+    min-width: 60%;
+    border: 1px solid #ddd ;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.35);
+}

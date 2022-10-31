@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Borrow.me</title>
+        <title>Item Cadastrado - Borrow.me</title>
 
         <!-- FAVICON -->
-        <link rel="apple-touch-icon" sizes="180x180" href="medias/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="medias/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="medias/favicon/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../medias/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../medias/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../medias/favicon/favicon-16x16.png">
 
 
         <!-- CSS -->
@@ -23,8 +23,10 @@
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
-        <link rel="stylesheet" href="../css/styles_login.css"/>
+        <link rel="stylesheet" href="../css/formularios.css">
+        <link rel="stylesheet" href="../css/styles_cadastrosconcluidos.css">
     </head>
+
     <body>
         <!-- CABEÇALHO -->
         <header>
@@ -34,33 +36,31 @@
                     <img class="cabecalho__logo__imagem" src="../medias/logo/1.png"/>
                 </div>
 
+                <div class="container-cabecalho__menu">
+                    <nav class="nav-menu">
+                        <ul class="menu__lista">
+                            <li class="menu__lista__item"><a href="home.html">Home</a></li>
+                            <li class="menu__lista__item"><a href="#principal__meusprodutos">Gerenciamento</a></li>
+                            <li class="menu__lista__item"><a href="#principal__novarequisicao">Nova Requisição</a></li>
+                            <li class="menu__lista__item"><a href="#">Suporte</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
             </div>
         </header>
         <!-- TÉRMINO CABEÇALHO-->
 
-        <section class="formulario">
-            <form method="get" action="home.html">
-                <div>
-                    <h1>Faça Seu login</h1>  
+        <main class="main">
+
+            <section class="sections secoes-cadastrosconcluidos">
+                <div class="div-box-cadastrosconcluidos">
+                    <img src="../medias/svg/check-ico.svg" alt="">
+                    <h3 class="titulosh3">Produto Cadastrado com Sucesso!</h3>
+                    <a href="#" class="todos-botoes">Ver Anúncio</a>
                 </div>
-                <div class="email">
-                    <label>Email</label>
-                    <input type="email" placeholder="Digite o Email" name="email" required/>
-                </div>
-                <div class="senha">
-                    <label>Senha</label>
-                    <input type="password" placeholder="Digite a Senha" name="senha:" required/> 
-                </div>
-                <div class="button_login">
-                    <a onclick href="home.html">
-                        <input type="submit" value="Entrar"/>
-                    </a>
-                </div>
-                <div class="clique_aqui">
-                    <span>Não tem cadastro? <a href="./criar-novaconta.html" style="color:#F2B707;">Clique aqui</a> </span>
-                </div>
-            </form>
-        </section>
+            </section>
+        </main>
 
         <footer>
             <div class="container-rodape">
@@ -72,6 +72,7 @@
                     <span>desenvolvido por: Equipe 128 Turma 4</span>
                 </div>
             </div>
-        </footer>
+        </footer>   
+
     </body>
 </html>

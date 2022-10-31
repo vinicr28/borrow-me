@@ -1,17 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+
 .secoes-formularios {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
 }
 
 .div-box-todos-formularios {
-    background-color: var(--brancoAmeno);
-    padding: 1rem;
-    border-radius: 5px;
-    max-width: 60%;
-    min-width: 60%;
-    border: 1px solid #ddd ;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.35);
+    background-color: #0734F2;
+    height: 700px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F2B707;
+    border-radius: 30px;
+    box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.40);
 }
 
+.titulosh2 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+form label {
+    margin-left: 10px;
+    margin-bottom: 2px;
+    color: white;
+}
+
+form input {
+  outline: none;
+  width: 90%;
+  border:2px solid #F2B707;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+form input:focus {
+    background-color: #80ecff;
+}
+
+form input[type=submit] {
+    background-color: #F2B707;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: 1s;
+}
+
+form input[type=submit]:hover {
+    transform: scale(1.02);
+}
+
+.clique_aqui {
+    margin-left: 10px;
+    color: white;
+    font-weight: 100;
+}

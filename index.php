@@ -1,6 +1,8 @@
 <?php
+require_once('funcoes.php');
 
-phpinfo();
-echo 'Testando';
+require_once('header.php');
+carrega_pagina();
+require_once('footer.php');
 
 ?>

@@ -41,7 +41,7 @@
         <!-- TÉRMINO CABEÇALHO-->
 
         <section class="formulario">
-            <form method="get" action="home.html">
+            <form method="get" action="dadosusuarios.php">
                 <div>
                     <h1>Faça Seu login</h1>  
                 </div>
@@ -54,26 +54,19 @@
                     <input type="password" placeholder="Digite a Senha" name="senha:" required/> 
                 </div>
                 <div class="button_login">
-                    <a onclick href="home.html">
+                    <a onclick href="fazer_login()">
                         <input type="submit" value="Entrar"/>
                     </a>
                 </div>
                 <div class="clique_aqui">
-                    <span>Não tem cadastro? <a href="./criar-novaconta.html" style="color:#F2B707;">Clique aqui</a> </span>
+                    <span>Não tem cadastro? <a href="page_criar-novaconta.php" style="color:#F2B707;">Clique aqui</a> </span>
                 </div>
             </form>
         </section>
 
-        <footer>
-            <div class="container-rodape">
-                <div class="container-rodape__imagem">
-                    <img class="rodape__imagem" src="../medias/logo/1.png"/>
-                </div>
-                <div class="container-rodape__descricao">
-                    <span>todos os direitos reservados ©</span>
-                    <span>desenvolvido por: Equipe 128 Turma 4</span>
-                </div>
-            </div>
-        </footer>
-    </body>
-</html>
+<?php
+    require_once('funcoes.php');
+
+    require_once('footer.php');
+    
+?>

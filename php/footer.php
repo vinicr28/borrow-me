@@ -2,7 +2,7 @@
         <footer>
             <div class="container-rodape">
                 <div class="container-rodape__imagem">
-                    <img class="rodape__imagem" src="medias/logo/1.png"/>
+                    <img class="rodape__imagem" src="../medias/logo/1.png"/>
                 </div>
                 <div class="container-rodape__descricao">
                     <span>todos os direitos reservados ©</span>

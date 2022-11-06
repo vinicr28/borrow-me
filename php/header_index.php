@@ -42,7 +42,7 @@
                             <li class="menu__lista__item"><a href="#">Home</a></li>
                             <li class="menu__lista__item"><a href="#main__quemsomos">Quem Somos</a></li>
                             <li class="menu__lista__item"><a href="#main__depoimentos">Depoimentos</a></li>
-                            <li class="menu__lista__item"><a href="html/login.html">Login</a></li>
+                            <li class="menu__lista__item"><a href="php/page_login.php">Login</a></li>
                         </ul>
                     </nav>
                 </div>

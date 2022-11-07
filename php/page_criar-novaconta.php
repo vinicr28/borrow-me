@@ -33,7 +33,7 @@
         <div class="container-cabecalho">
 
             <div class="container-cabecalho__logo">
-                <a href="../index.html">
+                <a href="../index.php">
                 <img class="cabecalho__logo__imagem" src="../medias/logo/1.png"/>
                 </a>
             </div>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="button_login">
-                   <a onclick href="./index.html">
+                   <a onclick href="../index.php">
                         <input type="submit" value="Cadastrar"/>
                    </a>
                 </div>

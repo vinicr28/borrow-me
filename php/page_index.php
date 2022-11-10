@@ -52,10 +52,12 @@
                     </div>
                     <div id="main__convite__criarconta">
                         <button>
-                            <h3>Crie sua conta e compartilhe teu estilo de vida</h3>
+                            <a href="php/page_criar-novaconta.php">
+                                <h3>Crie sua conta e compartilhe teu estilo de vida</h3>
+                            </a>
                         </button>
                         <br>
-                        <span>Se já tem conta, <a href="login.html">clique aqui</a>.</span>
+                        <span>Se já tem conta, <a href="php/page_login.php">clique aqui</a>.</span>
                     </div>
                 </div>
             </section>
@@ -187,7 +189,14 @@
                     
                     <h2 class="titulosh2">Crie tua conta</h2>
                     <p>E faça parte da rede mais colabortiva do Brasil.</p>
-                    <span>Se já tem conta,<a class="menu" href="html/login.html"> clique aqui</a>.</span>
+                    
+                    <div id="div-main__facaparte__botaocriarconta">
+                        <button id="botao-especial" class="todos-botoes">
+                            <a href="php/page_criar-novaconta.php">QUERO CRIAR MINHA CONTA AGORA</a>
+                        </button>
+                    </div>
+
+                    <span>Se já tem conta,<a class="menu" href="php/page_login.php"> clique aqui</a>.</span>
                 </div>
             </section>
         </main>

@@ -76,7 +76,7 @@
                    </a>
                 </div>
                 <div class="clique_aqui">
-                    <span>Já tem cadastro? <a href="./login.html" style="color:#F2B707;">Clique aqui</a></span>
+                    <span>Já tem cadastro? <a href="./page_login.php" style="color:#F2B707;">Clique aqui</a></span>
                 </div>
             </form>
         </div>

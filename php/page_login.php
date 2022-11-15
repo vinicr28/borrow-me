@@ -31,7 +31,7 @@
             <div class="container-cabecalho">
 
                 <div class="container-cabecalho__logo">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <img class="cabecalho__logo__imagem" src="../medias/logo/1.png"/>
                     </a>
                 </div>

@@ -63,8 +63,7 @@
         </main>
 
 <?php
-require_once('funcoes.php');
-criar_conta();
+require_once('funcoes-gerais.php');
 
 
 require_once('footer.php');

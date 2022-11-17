@@ -65,8 +65,8 @@
         </section>
 
 <?php
-    require_once('funcoes.php');
-
-    require_once('footer.php');
+    include('config.php');
     
+    require_once('funcoes-gerais.php');
+    require_once('footer.php');
 ?>

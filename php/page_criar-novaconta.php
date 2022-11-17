@@ -62,6 +62,10 @@
                     <input type="date" placeholder="" name="datanasc" required/>
                 </div>
                 <div>
+                    <label>CEP</label>
+                    <input type="text" placeholder="Com 8 dígitos" name="cep" required/>
+                </div>
+                <div>
                     <label>Telefone</label>
                     <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" required/>
                 </div>

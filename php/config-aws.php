@@ -1,9 +1,9 @@
 <?php
-    
-    define('HOST', 'localhost');
-    define('USER', 'root');
-    define('PASS', '0000');
-    define('BASE', 'borrowme');
+    #borrowme.cabcaqzt9ljg.us-east-1.rds.amazonaws.com
+    define('HOST', 'borrowme.cabcaqzt9ljg.us-east-1.rds.amazonaws.com');
+    define('USER', 'admin');
+    define('PASS', '130rr0w,M3');
+    define('BASE', 'borrow_me');
 
     # Cria conexão
     $conn = new MySQLi(HOST,USER,PASS,BASE);

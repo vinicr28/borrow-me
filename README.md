@@ -1,6 +1,6 @@
 # Borrow.Me
 
-**A Borrow.Me é um projeto fictício que visa conectar usuários interessados em descobrir novos estilos de vida e possibilidades, através da ação de disponibilizar e/ou solicitar um item emprestado.** 
+**A Borrow.Me é um projeto fictício que visa conectar usuários interessados em descobrir novos estilos de vida e  possibilidades, através da ação de disponibilizar e/ou solicitar um item emprestado.** 
 
 
 

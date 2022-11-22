@@ -51,7 +51,7 @@
                 </div>
                 <div class="senha">
                     <label>Senha</label>
-                    <input type="password" placeholder="Digite a Senha" name="senha:" required/> 
+                    <input type="password" placeholder="Digite a Senha" name="senha" required/> 
                 </div>
                 <div class="button_login">
                     <a onclick href="fazer_login()">

@@ -57,14 +57,13 @@
                 <div class="div-box-cadastrosconcluidos">
                     <img src="../medias/svg/check-ico.svg" alt="">
                     <h3 class="titulosh3">Cadastro realizado com sucesso!</h3>
-                    <a href="login.html" class="todos-botoes">Entrar na Minha Conta</a>
+                    <a href="page_login.php" class="todos-botoes">Entrar na Minha Conta</a>
                 </div>
             </section>
         </main>
 
 <?php
-require_once('funcoes.php');
-criar_conta();
+require_once('funcoes-gerais.php');
 
 
 require_once('footer.php');

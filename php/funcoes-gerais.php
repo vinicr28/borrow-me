@@ -1,5 +1,10 @@
 <?php
+include('config.php');
+require_once('funcoes-sql.php');
 
+function criar_conta() {
+   
+}
 
 
 function fazer_login() {
@@ -16,15 +21,6 @@ function fazer_login() {
      
 }
 
-function criar_conta() {
-    $inputnome = $_GET['nome'];
-    $inputemail = $_GET['email'];
-    $inputtel = $_GET['tel'];
-    $inputsenha = $_GET['senha'];
-    echo "Cadastro com PHP $inputnome $inputemail";
-
-}
-
 function carregar_page_produto($cod_produto) {
     $id_produto = $cod_produto;
 
@@ -34,5 +30,9 @@ function carregar_page_produto($cod_produto) {
         include_once('footer.php');
     
 }
+
+
+
+
 
 ?>

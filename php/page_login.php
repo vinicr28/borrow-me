@@ -31,7 +31,7 @@
             <div class="container-cabecalho">
 
                 <div class="container-cabecalho__logo">
-                    <a href="../index.html">
+                    <a href="../index.php">
                         <img class="cabecalho__logo__imagem" src="../medias/logo/1.png"/>
                     </a>
                 </div>
@@ -41,7 +41,8 @@
         <!-- TÉRMINO CABEÇALHO-->
 
         <section class="formulario">
-            <form method="get" action="dadosusuarios.php">
+            <form action="funcoes-sql.php" method="POST">
+            <input type="hidden" name="acao" value="logar">
                 <div>
                     <h1>Faça Seu login</h1>  
                 </div>
@@ -65,8 +66,8 @@
         </section>
 
 <?php
-    require_once('funcoes.php');
-
-    require_once('footer.php');
+    include('config.php');
     
+    require_once('funcoes-gerais.php');
+    require_once('footer.php');
 ?>

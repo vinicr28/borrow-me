@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
         <link rel="stylesheet" href="../css/formularios.css">
+        <link rel="stylesheet" href="../css/styles_criarconta.css">
     </head>
 
 <body>
@@ -49,41 +50,63 @@
                 <div>
                   <h2 class="titulosh2">Faça Seu Cadastro</h2>
                 </div>
-                <div>
-                    <label>Nome</label>
-                    <input type="text" placeholder="Qual o seu nome completo?" name="nome" required/>
-                </div>
-                <div>
-                    <label>CPF</label>
-                    <input type="text" placeholder="Com 11 dígitos" name="cpf" required/>
-                </div>
-                <div>
-                    <label>Data de Nascimento</label>
-                    <input type="date" placeholder="" name="datanasc" required/>
-                </div>
-                <div>
-                    <label>CEP</label>
-                    <input type="text" placeholder="Com 8 dígitos" name="cep" required/>
-                </div>
-                <div>
-                    <label>Telefone</label>
-                    <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" required/>
-                </div>
-                <div class="email">
-                    <label>Email</label>
-                    <input type="email" placeholder="Digite o Email" name="email" required/>
-                </div>
-                <div class="senha">
-                    <label>Senha</label>
-                    <div class="confirma_senha">
-                        <div class="senha1">
-                            <input type="password" placeholder="Senha" name="senha" required/>
-                        </div>
-                        <div class="senha2">
-                            <input type="password" placeholder="Confirme sua Senha" name="confirmasenha" required/>
+                <fieldset class="field-cadastro" id="box-form-dadospessoais">
+                    <div>
+                        <label>Nome</label>
+                        <input type="text" placeholder="Qual o seu nome completo?" name="nome" required/>
+                    </div>
+                    <div>
+                        <label>CPF</label>
+                        <input type="text" placeholder="Com 11 dígitos" name="cpf" required/>
+                    </div>
+                    <div>
+                        <label>Data de Nascimento</label>
+                        <input type="date" placeholder="" name="datanasc" required/>
+                    </div>
+                    <div>
+                        <label>Telefone</label>
+                        <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" required/>
+                    </div>
+                </fieldset>
+                <fieldset class="field-cadastro" id="box-form-endereco">
+                    <div>
+                        <label>CEP</label>
+                        <input type="text" placeholder="Com 8 dígitos" name="cep" required/>
+                    </div>
+                    <div>
+                        <label>Logradouro</label>
+                        <input type="text" placeholder="Preenchimento Automático" name="logradouro"/>
+                    </div>
+                    <div>
+                        <label>Bairro</label>
+                        <input type="text" placeholder="" name="bairro"/>
+                    </div>
+                    <div>
+                        <label>Cidade</label>
+                        <input type="text" placeholder="" name="cidade"/>
+                    </div>
+                    <div>
+                        <label>Estado</label>
+                        <input type="text" placeholder="" name="uf"/>
+                    </div>
+                </fieldset>
+                <fieldset class="field-cadastro" id="box-form-login">
+                    <div class="email">
+                        <label>Email</label>
+                        <input type="email" placeholder="Digite o Email" name="email" required/>
+                    </div>
+                    <div class="senha">
+                        <label>Senha</label>
+                        <div class="confirma_senha">
+                            <div class="senha1">
+                                <input type="password" placeholder="Senha" name="senha" required/>
+                            </div>
+                            <div class="senha2">
+                                <input type="password" placeholder="Confirme sua Senha" name="confirmasenha" required/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </fieldset>
                 <div class="button_login">
                     <button type="submit" class="todos-botoes">
                         Cadastrar

@@ -41,7 +41,8 @@
         <!-- TÉRMINO CABEÇALHO-->
 
         <section class="formulario">
-            <form method="get" action="dadosusuarios.php">
+            <form action="funcoes-sql.php" method="POST">
+            <input type="hidden" name="acao" value="logar">
                 <div>
                     <h1>Faça Seu login</h1>  
                 </div>

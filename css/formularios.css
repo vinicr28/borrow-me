@@ -36,11 +36,10 @@ form label {
 
 form input {
   outline: none;
-  width: 90%;
   border:2px solid #F2B707;
   border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 15px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 form input:focus {

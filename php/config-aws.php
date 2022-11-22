@@ -2,7 +2,7 @@
     #borrowme.cabcaqzt9ljg.us-east-1.rds.amazonaws.com
     define('HOST', 'borrowme.cabcaqzt9ljg.us-east-1.rds.amazonaws.com');
     define('USER', 'admin');
-    define('PASS', '130rr0w,M3');
+    define('PASS', '####');
     define('BASE', 'borrow_me');
 
     # Cria conexão

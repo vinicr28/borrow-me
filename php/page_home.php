@@ -1,3 +1,7 @@
+<?php
+    require "autentica.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -45,6 +49,12 @@
                             <li class="menu__lista__item"><a href="#">Suporte</a></li>
                         </ul>
                     </nav>
+                </div>
+
+                <div class="container-cabecalho__log">
+                    <p>Navegando como <?php echo $_SESSION['nome']; ?> </p>
+                    <span> Não é você, <a href="logout.php">clique aqui</a>.</span>
+
                 </div>
 
             </div>
@@ -188,6 +198,6 @@
 
 <?php
 
-require_once('footer.php');
+    require_once('footer.php');
 
 ?>

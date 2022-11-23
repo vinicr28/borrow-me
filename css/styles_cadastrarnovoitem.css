@@ -1,0 +1,18 @@
+#div-novoitem {
+    flex-direction: column;
+}
+
+.div-fieldsets__cadainfo {
+    
+    display: block;
+    width: 100%;
+}
+
+#categoria {
+    border: 2px solid #F2B707;
+    outline: none;
+    border: 2px solid #F2B707;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+}

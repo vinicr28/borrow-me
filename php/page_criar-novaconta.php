@@ -46,7 +46,7 @@
             
 
             <form action="funcoes-sql.php" method="POST">
-                <input type="hidden" name="acao" value="cadastrar">
+                <input type="hidden" name="acao" value="criarconta">
                 <div>
                   <h2 class="titulosh2">Faça Seu Cadastro</h2>
                 </div>
@@ -71,20 +71,9 @@
                 <fieldset class="field-cadastro" id="box-form-endereco">
                     <div>
                         <label>CEP</label>
-                        <input type="text" placeholder="Com 8 dígitos" name="cep" required/>
+                        <input type="text" placeholder="0000-000" name="cep" pattern="[\d]{5}-?[\d]{3}" required/>
                     </div>
-                    <div>
-                        <label>Logradouro</label>
-                        <input type="text" placeholder="Preenchimento Automático" name="logradouro"/>
-                    </div>
-                    <div>
-                        <label>Bairro</label>
-                        <input type="text" placeholder="" name="bairro"/>
-                    </div>
-                    <div>
-                        <label>Cidade</label>
-                        <input type="text" placeholder="" name="cidade"/>
-                    </div>
+                    
                     <div>
                         <label>Estado</label>
                         <input type="text" placeholder="" name="uf"/>

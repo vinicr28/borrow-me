@@ -23,8 +23,7 @@
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
-        <link rel="stylesheet" href="../css/formularios.css">
-        <link rel="stylesheet" href="../css/styles_criarconta.css">
+        <link rel="stylesheet" href="../css/titulos/teste_cadastro.css">
     </head>
 
 <body>
@@ -59,6 +58,8 @@
                         <label>CPF</label>
                         <input type="text" placeholder="Com 11 dígitos" name="cpf" required/>
                     </div>
+                </fieldset>
+                <fieldset class="field-cadastro" id="box-form-dadospessoais2">
                     <div>
                         <label>Data de Nascimento</label>
                         <input type="date" placeholder="" name="datanasc" required/>
@@ -67,7 +68,7 @@
                         <label>Telefone</label>
                         <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" required/>
                     </div>
-                </fieldset>
+                </fieldset>    
                 <fieldset class="field-cadastro" id="box-form-endereco">
                     <div>
                         <label>CEP</label>
@@ -77,6 +78,8 @@
                         <label>Logradouro</label>
                         <input type="text" placeholder="Preenchimento Automático" name="logradouro"/>
                     </div>
+                </fieldset>    
+                <fieldset class="field-cadastro" id="box-form-endereco2">    
                     <div>
                         <label>Bairro</label>
                         <input type="text" placeholder="" name="bairro"/>
@@ -84,10 +87,6 @@
                     <div>
                         <label>Cidade</label>
                         <input type="text" placeholder="" name="cidade"/>
-                    </div>
-                    <div>
-                        <label>Estado</label>
-                        <input type="text" placeholder="" name="uf"/>
                     </div>
                 </fieldset>
                 <fieldset class="field-cadastro" id="box-form-login">

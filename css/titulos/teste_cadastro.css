@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+
+
+.div-box-todos-formularios {
+  background-color: #0734F2;
+  margin: auto 600px;
+  padding:  50px 0;
+  text-align: center;
+  border: 2px solid #F2B707;
+  border-radius: 30px;
+  box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.40);
+}
+
+form {
+  display: absolute;
+  margin: 0 100px;
+}
+
+.titulosh2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+label{
+  display: flex;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  outline: none;
+  border:2px solid #F2B707;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+form input:focus {
+  background-color: #80ecff;
+}
+
+.senha2 {
+  margin-top: 5px;
+}
+
+.todos-botoes {
+  background-color: #F2B707;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  width: 105%;
+  font-size: 17px;
+  font-weight: 600;
+  
+}
+
+.clique_aqui {
+  margin-left: 10px;
+  color: white;
+  font-weight: 100;
+}

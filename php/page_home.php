@@ -78,7 +78,7 @@
                 <div class="div-container__grades">
 
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="./automoveis.html">
+                        <a href="../html/automoveis.html">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Automóveis
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/1500610/pexels-photo-1500610.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="./jogos.html">
+                        <a href="../html/jogos.html">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Jogos
@@ -97,7 +97,7 @@
                         </a>
                     </div>
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="./esportes.html">
+                        <a href="../html/esportes.html">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Esportes
@@ -106,7 +106,7 @@
                         </a>
                     </div>
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="./acomodacoes.html">
+                        <a href="../html/acomodacoes.html">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Acomodação

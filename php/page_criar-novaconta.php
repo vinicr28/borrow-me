@@ -23,8 +23,7 @@
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
-        <link rel="stylesheet" href="../css/formularios.css">
-        <link rel="stylesheet" href="../css/styles_criarconta.css">
+        <link rel="stylesheet" href="../css/titulos/teste_cadastro.css">
     </head>
 
 <body>
@@ -59,23 +58,29 @@
                         <label>CPF</label>
                         <input type="text" placeholder="Com 11 dígitos" name="cpf" required/>
                     </div>
+                </fieldset>
+                <fieldset class="field-cadastro" id="box-form-dadospessoais2">
                     <div>
                         <label>Data de Nascimento</label>
                         <input type="date" placeholder="" name="datanasc" required/>
                     </div>
                     <div>
                         <label>Telefone</label>
-                        <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" required/>
+                        <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" pattern= "^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required/>
                     </div>
-                </fieldset>
+                </fieldset>    
                 <fieldset class="field-cadastro" id="box-form-endereco">
                     <div>
                         <label>CEP</label>
                         <input type="text" placeholder="0000-000" name="cep" pattern="[\d]{5}-?[\d]{3}" required/>
                     </div>
-                    
                     <div>
                         <label>Estado</label>
+                        <select id="categoria" name="uf">
+                            <option value="RJ">RJ</option>
+                            <option value="SP">SP</option>
+                            <option value="PR">PR</option>
+                        </select>
                         <input type="text" placeholder="" name="uf"/>
                     </div>
                 </fieldset>

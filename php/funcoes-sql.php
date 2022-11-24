@@ -29,7 +29,7 @@
             $resposta->execute();
 
             if ($resposta->rowCount()) {
-                header("Location: ./page_cadastroconcluido-novoitem.php");
+                header("Location: ./page_cadastroconcluido-usuario.php");
             } 
             else {
                 header("Location: ./page_login.php");
@@ -52,6 +52,14 @@
                 $row = mysqli_fetch_assoc($resposta);
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['nome'] = $row['nome'];
+                $_SESSION['cpf'] = $row['cpf'];
+                $_SESSION['dn'] = $row['data_nascimento'];
+                $_SESSION['cep'] = $row['cep'];
+                $_SESSION['uf'] = $row['uf'];
+                $_SESSION['tel'] = $row['telefone'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['senha'] = $row['senha'];
+                $_SESSION['descricao'] = $row['profile'];
 
                 header("Location: ./page_home.php");
             } 
@@ -60,7 +68,11 @@
             }
 
             break;
+        
 
+        case 'editar':
+            #code...
+            break;
         case 'excluir':
             #code...
             break;

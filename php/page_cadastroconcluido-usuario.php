@@ -57,7 +57,9 @@
                 <div class="div-box-cadastrosconcluidos">
                     <img src="../medias/svg/check-ico.svg" alt="">
                     <h3 class="titulosh3">Cadastro realizado com sucesso!</h3>
-                    <a href="page_login.php" class="todos-botoes">Entrar na Minha Conta</a>
+                    <button class="todos-botoes" id="btt-primeiroLogin">
+                        <a href="page_login.php">Entrar na Minha Conta</a>
+                    </button>
                 </div>
             </section>
         </main>

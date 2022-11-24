@@ -23,7 +23,8 @@
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
-        <link rel="stylesheet" href="../css/titulos/teste_cadastro.css">
+        <link rel="stylesheet" href="../css/formularios.css">
+        <link rel="stylesheet" href="../css/styles_criarconta.css">
     </head>
 
 <body>
@@ -50,48 +51,72 @@
                   <h2 class="titulosh2">Faça Seu Cadastro</h2>
                 </div>
                 <fieldset class="field-cadastro" id="box-form-dadospessoais">
-                    <div>
-                        <label>Nome</label>
+                    <div id="div-nome">
+                        <label>Nome</label><br>
                         <input type="text" placeholder="Qual o seu nome completo?" name="nome" required/>
                     </div>
-                    <div>
-                        <label>CPF</label>
-                        <input type="text" placeholder="Com 11 dígitos" name="cpf" required/>
+                    <div class="container-form-inline">
+                        <div id="div-cpf">
+                            <label>CPF</label><br>
+                            <input type="text" placeholder="Com 11 dígitos" name="cpf" required/>
+                        </div>
+                        <div id="div-dn">
+                            <label>Data de Nascimento</label><br>
+                            <input type="date" placeholder="" name="datanasc" required/>
+                        </div>
                     </div>
                 </fieldset>
-                <fieldset class="field-cadastro" id="box-form-dadospessoais2">
+                  
+                <fieldset class="field-cadastro" id="box-form-contato">
                     <div>
-                        <label>Data de Nascimento</label>
-                        <input type="date" placeholder="" name="datanasc" required/>
-                    </div>
-                    <div>
-                        <label>Telefone</label>
+                        <label>Telefone</label><br>
                         <input type="tel" placeholder="(xx)xxxxx-xxxx" name="tel" pattern= "^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required/>
                     </div>
-                </fieldset>    
-                <fieldset class="field-cadastro" id="box-form-endereco">
                     <div>
-                        <label>CEP</label>
-                        <input type="text" placeholder="0000-000" name="cep" pattern="[\d]{5}-?[\d]{3}" required/>
-                    </div>
-                    <div>
-                        <label>Estado</label>
-                        <select id="categoria" name="uf">
-                            <option value="RJ">RJ</option>
-                            <option value="SP">SP</option>
+                        <label>CEP</label><br>
+                            <input type="text" placeholder="0000-000" name="cep" pattern="[\d]{5}-?[\d]{3}" required/>
+                    </div>    
+                    <div>  
+                        <label>UF</label><br>
+                        <select id="select-categoria" name="uf">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AM">AM</option>
+                            <option value="AP">AP</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
                             <option value="PR">PR</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="RS">RS</option>
+                            <option value="SC">SC</option>
+                            <option value="SE">SE</option>
+                            <option value="SP">SP</option>
+                            <option value="TO">TO</option>
                         </select>
-                        <input type="text" placeholder="" name="uf"/>
                     </div>
                 </fieldset>
                 <fieldset class="field-cadastro" id="box-form-login">
-                    <div class="email">
-                        <label>Email</label>
+                    <div id="div-email">
+                        <label>Email</label><br>
                         <input type="email" placeholder="Digite o Email" name="email" required/>
                     </div>
-                    <div class="senha">
-                        <label>Senha</label>
-                        <div class="confirma_senha">
+                    <div id="div-senhas">
+                        <label>Senha</label><br>
+                        <div id="div-input-senhas">
                             <div class="senha1">
                                 <input type="password" placeholder="Senha" name="senha" required/>
                             </div>
@@ -101,13 +126,15 @@
                         </div>
                     </div>
                 </fieldset>
-                <div class="button_login">
-                    <button type="submit" class="todos-botoes">
-                        Cadastrar
-                    </button>
-                </div>
-                <div class="clique_aqui">
-                    <span>Já tem cadastro? <a href="./page_login.php" style="color:#F2B707;">Clique aqui</a></span>
+                <div id="div-botoes-center">
+                    <div class="button_login">
+                        <button type="submit" class="todos-botoes">
+                            Cadastrar
+                        </button>
+                    </div>
+                    <div class="clique_aqui">
+                        <span>Já tem cadastro? <a href="./page_login.php" style="color:#F2B707;">Clique aqui</a></span>
+                    </div>
                 </div>
             </form>
 

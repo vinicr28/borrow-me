@@ -5,6 +5,7 @@
 }
 
 .div-box-cadastrosconcluidos {
+    text-align: center;
     background-color: var(--brancoAmeno);
     padding: 1rem;
     border-radius: 5px;
@@ -14,4 +15,8 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.35);
+}
+
+#btt-primeiroLogin {
+    margin-top: 1rem;
 }

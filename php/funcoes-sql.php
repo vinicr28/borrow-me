@@ -71,20 +71,21 @@
             $inputCategoria = $_POST['categoria'];
             $inputPreco = $_POST['preco'];
             $inputImagem = $_POST['foto'];
+            echo $inputTitulo;
             
             $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}') ";
-            $resposta = $conn->query($sql);
+            $resposta = $conn_sql->query($sql);
 
             if($resposta==true){
+                echo 'Teste com resposta TRUE';
                 header("Location: ./page_cadastroconcluido-novoitem.php");
             }else{
+                echo 'Teste com resposta FALSE';
                 print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
                 header("Location: ./page_perfil.php");
             }
 
             break;
-
-
 
 
         default:

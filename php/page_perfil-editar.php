@@ -84,9 +84,9 @@
                                 <input type="hidden" name="cID" value="<?php echo $currentID; ?>">
                                 
                                 <fieldset class="field-cadastro" id="box-form-aboutme">                                  
-                                    <div>
+                                    <div id="div-about">
                                         <label>Sobre Mim</label><br>
-                                        <input type="text" value="<?php echo $row->profile; ?>" name="aboutme">
+                                        <input type="text" value="<?php echo $row->about_me; ?>" name="aboutme">
                                     </div>
                                 </fieldset>
     
@@ -159,18 +159,24 @@
                                     </div>
                                 </fieldset>
                                 <div class="div-botoes-center">
-                                    <div class="div-bttEditar">
-                                        <button type="submit" class="todos-botoes">
-                                            Editar dados do Perfil
-                                        </button>
-                                    </div>
-                                    <div class="div-bttsDiversos">
-                                        <button class="todos-botoes"><a href="">Logout</a></button>
-                                        <button class="todos-botoes"><a href="">Encerrar Conta</a></button>
-                                    </div>
+                                    <button type="submit" class="todos-botoes">
+                                        OK
+                                    </button>
                                 </div>
                             </form>
-
+                        </div>
+                        <div id="principal__perfil__perfil__conta__botoes">
+                            <div class="div-botoes-center">
+                                <form action="funcoes-sql.php" method="POST">
+                                    <button class="todos-botoes"><a href="logout.php">Encerrar Sessão</a></button>
+                                    
+                                    <input type="hidden" name="cID" value="<?php echo $currentID; ?>">
+                                    <input type="hidden" name="acao" value="excluirconta">
+                                    <button type="submit" class="todos-botoes">
+                                        Excluir Conta
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                        
                     </div>

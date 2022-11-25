@@ -1,0 +1,67 @@
+#requisita__form {
+    flex-direction: column;
+}
+
+form {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.fields-requisicao {
+    display: flex;
+    padding: 1rem 0.5rem;
+    width: 95%;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+#div-nome { 
+    width: 50%;
+}
+#div-nome input { 
+    width: 95%;
+    border: none;
+}
+
+#div-cpf { 
+    width: 30%;
+}
+#div-cpf input { 
+    width: 85%;
+    border: none;
+}
+
+#div-email {
+    width: 100%;
+}
+
+#div-email input {
+    width: 95%;
+    border: none;
+}
+
+#div-produto {
+    width: 100%;
+}
+
+#div-produto select {
+    width: 100%;
+    outline: none;
+    border: 2px solid #F2B707;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: inherit;
+}
+
+#btt-solicitar {
+    width: 30%;
+    margin: 1rem 35%;
+}
+
+
+
+
+

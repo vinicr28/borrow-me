@@ -2,7 +2,7 @@
     
     define('HOST', 'localhost');
     define('USER', 'root');
-    define('PASS', '0000');
+    define('PASS', '');
     define('BASE', 'borrowme');
 
     # Cria conexão

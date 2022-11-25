@@ -39,7 +39,7 @@
                 <div class="container-cabecalho__menu">
                     <nav class="nav-menu">
                         <ul class="menu__lista">
-                            <li class="menu__lista__item"><a href="home.html">Home</a></li>
+                            <li class="menu__lista__item"><a href="page_home.php">Home</a></li>
                             <li class="menu__lista__item"><a href="#principal__meusprodutos">Gerenciamento</a></li>
                             <li class="menu__lista__item"><a href="#principal__novarequisicao">Nova Requisição</a></li>
                             <li class="menu__lista__item"><a href="#">Suporte</a></li>

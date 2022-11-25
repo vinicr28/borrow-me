@@ -1,6 +1,6 @@
 #divcontainer-principal__perfil__perfil {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 .divcontainer-principal__perfil__item {
@@ -14,83 +14,16 @@
 }
 
 #principal__perfil__perfil__conta {
-    background-color: var(--azulEscuro);
-}
-
-.field-cadastro {
-    display: flex;
-    padding: 1rem 0.5rem;
-    width: 95%;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-
-form input {
-    outline: none;
-    border: 2px solid var(--amareloPrincipal);
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 2px;
-}
-
-
-
-
-#div-nome { 
-    width: 50%;
-}
-#div-nome input { 
-    width: 95%;
-}
-
-#div-cpf { 
-    width: 20%;
-}
-#div-cpf input { 
-    width: 95%;
-}
-
-#div-dn {
-    width: 10%;
-}
-#div-dn input {
-    width: 95%;
-}
-
-
-
-#select-categoria {
-    outline: none;
-    border: 2px solid #F2B707;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 5px;
-}
-
-
-
-
-#div-email {
-    width: 60%;
-}
-
-#div-email input {
-    width: 95%;
-}
-
-#div-senha {
-    width: 35%;
-}
-
-#div-senha input {
-    width: 95%;
+    background-color: var(--brancoAmeno);
 }
 
 .div-botoes-center {
+    display: flex;
+    flex-direction: column;
     margin: 1rem;
     text-align: center;
+    padding: 0 auto;
 }
-
 
 #divcontainer-principal__perfil__historico {
     min-height: 150px;

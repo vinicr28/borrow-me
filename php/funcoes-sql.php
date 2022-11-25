@@ -4,6 +4,8 @@
 
 
     switch ($_REQUEST["acao"]) {
+        
+        
         case 'criarconta':
             $inputNome = $_POST['nome'];
             $inputCPF = $_POST['cpf'];
@@ -37,13 +39,13 @@
 
             break;
 
+        
         case 'logar':
             $inputEmail = $_POST['email'];
             $inputSenha = $_POST['senha'];
             echo "Login com $inputEmail e $inputSenha";
 
             $sql = "SELECT * FROM todosusuarios WHERE email = '$inputEmail' AND senha = '$inputSenha' ";
-            //echo $sql;
             $resposta = mysqli_query($conn_sql, $sql);
             $qtdReg = mysqli_num_rows($resposta);
 
@@ -71,11 +73,42 @@
         
 
         case 'editar':
-            #code...
+            $currentID = $_POST['cID'];
+            $inputNome = $_POST['nome'];
+            $inputCPF = $_POST['cpf'];
+            $inputDN = $_POST['datanasc'];
+            $inputCEP = $_POST['cep'];
+            $inputUF = $_POST['uf'];
+            $inputTel = $_POST['tel'];
+            $inputEmail = $_POST['email'];
+            $inputSenha = $_POST['senha'];
+            echo "Atualização com PHP $inputNome $inputEmail";
+
+            $sql = "UPDATE todosusuarios SET
+                        nome='{$inputNome}',
+                        cpf='{$inputCPF}',
+                        data_nascimento='{$inputDN}'
+
+                    WHERE 
+                        id=".$currentID;
+            $resposta = $conn_sql->query($sql);
+
+            if($resposta==true){
+                echo 'Teste com resposta TRUE';
+                header("Location: ./page_cadastroconcluido-novoitem.php");
+            }else{
+                echo 'Teste com resposta FALSE';
+                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
+                header("Location: ./page_perfil.php");
+            }
+
             break;
+        
+        
         case 'excluir':
             #code...
             break;
+        
         case 'cadastraritem':
             $inputTitulo = $_POST['titulo'];
             $inputResumo = $_POST['subtitulo'];
@@ -101,7 +134,6 @@
 
 
         default:
-            # code...
             break;
     }
 

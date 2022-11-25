@@ -69,117 +69,28 @@
                     <div class="divcontainer-principal__perfil__item" id="principal__perfil__perfil__resumo">
                         <h3 class="titulosh3">Sobre Mim</h3>
 
-                        <div id="principal__perfil__perfil__resumo__form">
-                            <form action="funcoes-sql.php" method="POST">
-                                <input type="hidden" name="acao" value="editar">
-                                
-                                <input type="text" placeholder=" <?php echo $_SESSION['descricao']; ?> ">
-                                    
-                                </p>
-                            </form>
-                            <div id="div-botoes-center">
-                                    <div class="div-bttEditar">
-                                        <button type="submit" class="todos-botoes">
-                                            Editar Sobre Mim
-                                        </button>
-                                    </div>
-                            </div>
-                        </div>
-                        
+                        <div id="principal__perfil__perfil__resumo__profile">    
+                                <p>                               
+                                    <?php echo $_SESSION['descricao']; ?>          
+                                </p>                            
+                        </div>                       
                     </div>
                     <div class="divcontainer-principal__perfil__item" id="principal__perfil__perfil__conta">
                         <h3 class="titulosh3">Configurações</h3>
 
-                        <div id="principal__perfil__perfil__conta__form">
-                            <form action="funcoes-sql.php" method="POST">
-                                <input type="hidden" name="acao" value="editar">
-                                <div>
-                                    <h2 class="titulosh4">Meu Perfil</h2>
-                                </div>
-                                
-                                <fieldset class="field-cadastro" id="box-form-dadospessoais">
-                                    <div id="div-nome">
-                                        <label>Nome</label><br>
-                                        <input type="text" placeholder="<?php echo $_SESSION['nome']; ?>" name="nome" />
-                                    </div>
-                                    <div id="div-cpf">
-                                            <label>CPF</label><br>
-                                            <input type="text" placeholder="<?php echo $_SESSION['cpf']; ?>" name="cpf"/>
-                                    </div>
-                                    <div id="div-dn">
-                                            <label>DN</label><br>
-                                            <input type="date" placeholder="<?php echo $_SESSION['dn']; ?>" name="datanasc"/>
-                                    </div>
-                                </fieldset>
-                                
-                                <fieldset class="field-cadastro" id="box-form-contato">
-                                    <div>
-                                        <label>Telefone</label><br>
-                                        <input type="tel" placeholder="<?php echo $_SESSION['tel']; ?>" name="tel" pattern= "^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$"/>
-                                    </div>
-                                    <div>
-                                        <label>CEP</label><br>
-                                            <input type="text" placeholder="<?php echo $_SESSION['cep']; ?>" name="cep" pattern="[\d]{5}-?[\d]{3}" required/>
-                                    </div>    
-                                    <div>  
-                                        <label>UF</label><br>
-                                        <select id="select-categoria" name="uf">
-                                            <option value="<?php $_SESSION['uf']; ?>"> <?php echo $_SESSION['uf']; ?> </option>
-                                            <option value="AC">AC</option>
-                                            <option value="AL">AL</option>
-                                            <option value="AM">AM</option>
-                                            <option value="AP">AP</option>
-                                            <option value="BA">BA</option>
-                                            <option value="CE">CE</option>
-                                            <option value="DF">DF</option>
-                                            <option value="ES">ES</option>
-                                            <option value="GO">GO</option>
-                                            <option value="MA">MA</option>
-                                            <option value="MG">MG</option>
-                                            <option value="MS">MS</option>
-                                            <option value="MT">MT</option>
-                                            <option value="PA">PA</option>
-                                            <option value="PB">PB</option>
-                                            <option value="PE">PE</option>
-                                            <option value="PI">PI</option>
-                                            <option value="PR">PR</option>
-                                            <option value="RJ">RJ</option>
-                                            <option value="RN">RN</option>
-                                            <option value="RO">RO</option>
-                                            <option value="RR">RR</option>
-                                            <option value="RS">RS</option>
-                                            <option value="SC">SC</option>
-                                            <option value="SE">SE</option>
-                                            <option value="SP">SP</option>
-                                            <option value="TO">TO</option>
-                                        </select>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="field-cadastro" id="box-form-login">
-                                    <div id="div-email">
-                                        <label>Email</label><br>
-                                        <input type="email" placeholder="<?php echo $_SESSION['email']; ?>" name="email"/>
-                                    </div>
-                                    <div id="div-senha">
-                                        <label>Senha</label><br>               
-                                        <input type="password" placeholder="<?php echo $_SESSION['senha']; ?>" name="senha">
-                                    </div>
-                                </fieldset>
-                                <div class="div-botoes-center">
-                                    <div class="div-bttEditar">
-                                        <button type="submit" class="todos-botoes">
-                                            Editar dados do Perfil
-                                        </button>
-                                    </div>
-                                    <div class="div-bttsDiversos">
-                                        <button class="todos-botoes"><a href="">Logout</a></button>
-                                        <button class="todos-botoes"><a href="">Encerrar Conta</a></button>
-                                    </div>
-                                </div>
-                            </form>
+                            
+                            <div class="div-botoes-center">
+                                <button class="todos-botoes">
+                                    <a href="./page_perfil-editar.php">Editar Perfil</a>
+                                </button>
+                                <button class="todos-botoes">
+                                    <a href="logout.php">Encerrar Sessão</a>
+                                </button>
+                                <button  class="todos-botoes">
+                                    <a href="logout.php">Exluir Conta</a>
+                                </button>
+                            </div>
 
-                        </div>
-                       
                     </div>
                 </div>
 

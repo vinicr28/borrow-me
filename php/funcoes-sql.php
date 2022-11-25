@@ -4,41 +4,49 @@
 
 
     switch ($_REQUEST["acao"]) {
-        case 'cadastrar':
+        
+        
+        case 'criarconta':
             $inputNome = $_POST['nome'];
             $inputCPF = $_POST['cpf'];
             $inputDN = $_POST['datanasc'];
             $inputCEP = $_POST['cep'];
-            $inputLogradouro = $_POST['logradouro'];
-            $inputBairro = $_POST['bairro'];
-            $inputCidade = $_POST['cidade'];
             $inputUF = $_POST['uf'];
             $inputTel = $_POST['tel'];
             $inputEmail = $_POST['email'];
             $inputSenha = $_POST['senha'];
             echo "Cadastro com PHP $inputNome $inputEmail";
+            
+            $novo_user = array('nome'=> $inputNome, 'cpf'=> $inputCPF, 'dn'=> $inputDN, 'cep'=> $inputCEP, 'uf'=> $inputUF, 'tel'=> $inputTel, 'email'=> $inputEmail, 'senha'=> $inputSenha,);
+            $resposta = $conn_pdo->prepare(" INSERT INTO todosusuarios (nome,cpf,data_nascimento,cep,uf,telefone,email,senha) VALUES (:nome,:cpf,:dn,:cep,:uf,:tel,:email,:senha) ");
+            $resposta->bindParam(':nome', $novo_user['nome'], PDO::PARAM_STR);
+            $resposta->bindParam(':cpf', $novo_user['cpf'], PDO::PARAM_STR);
+            $resposta->bindParam(':dn', $novo_user['dn'], PDO::PARAM_STR);
+            $resposta->bindParam(':cep', $novo_user['cep'], PDO::PARAM_STR);
+            $resposta->bindParam(':uf', $novo_user['uf'], PDO::PARAM_STR);
+            $resposta->bindParam(':tel', $novo_user['tel'], PDO::PARAM_STR);
+            $resposta->bindParam(':email', $novo_user['email'], PDO::PARAM_STR);
+            $resposta->bindParam(':senha', $novo_user['senha'], PDO::PARAM_STR);
 
-            $sql = "INSERT INTO todosusuarios (nome, cpf, data_nascimento, cep, logradouro, bairro, cidade, uf, telefone, email, senha)  VALUES ('{$inputNome}', '{$inputCPF}', '{$inputDN}', '{$inputCEP}', '{$inputLogradouro}', '{$inputBairro}', '{$inputCidade}', '{$inputUF}','{$inputTel}', '{$inputEmail}', '{$inputSenha}')";
-            $resposta = $conn->query($sql);
+            $resposta->execute();
 
-            if($resposta==true){
+            if ($resposta->rowCount()) {
                 header("Location: ./page_cadastroconcluido-usuario.php");
-                echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-            }else{
-                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
-                print "<script>location.href='./page_cadastroconcluido-usuario.php';</script>";
+            } 
+            else {
+                header("Location: ./page_login.php");
             }
 
             break;
 
+        
         case 'logar':
             $inputEmail = $_POST['email'];
             $inputSenha = $_POST['senha'];
             echo "Login com $inputEmail e $inputSenha";
 
             $sql = "SELECT * FROM todosusuarios WHERE email = '$inputEmail' AND senha = '$inputSenha' ";
-            //echo $sql;
-            $resposta = mysqli_query($conn, $sql);
+            $resposta = mysqli_query($conn_sql, $sql);
             $qtdReg = mysqli_num_rows($resposta);
 
             if ($qtdReg > 0) {
@@ -46,6 +54,14 @@
                 $row = mysqli_fetch_assoc($resposta);
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['nome'] = $row['nome'];
+                $_SESSION['cpf'] = $row['cpf'];
+                $_SESSION['dn'] = $row['data_nascimento'];
+                $_SESSION['cep'] = $row['cep'];
+                $_SESSION['uf'] = $row['uf'];
+                $_SESSION['tel'] = $row['telefone'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['senha'] = $row['senha'];
+                $_SESSION['descricao'] = $row['profile'];
 
                 header("Location: ./page_home.php");
             } 
@@ -54,15 +70,70 @@
             }
 
             break;
+        
 
+        case 'editar':
+            $currentID = $_POST['cID'];
+            $inputNome = $_POST['nome'];
+            $inputCPF = $_POST['cpf'];
+            $inputDN = $_POST['datanasc'];
+            $inputCEP = $_POST['cep'];
+            $inputUF = $_POST['uf'];
+            $inputTel = $_POST['tel'];
+            $inputEmail = $_POST['email'];
+            $inputSenha = $_POST['senha'];
+            echo "Atualização com PHP $inputNome $inputEmail";
+
+            $sql = "UPDATE todosusuarios SET
+                        nome='{$inputNome}',
+                        cpf='{$inputCPF}',
+                        data_nascimento='{$inputDN}'
+
+                    WHERE 
+                        id=".$currentID;
+            $resposta = $conn_sql->query($sql);
+
+            if($resposta==true){
+                echo 'Teste com resposta TRUE';
+                header("Location: ./page_cadastroconcluido-novoitem.php");
+            }else{
+                echo 'Teste com resposta FALSE';
+                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
+                header("Location: ./page_perfil.php");
+            }
+
+            break;
+        
+        
         case 'excluir':
             #code...
             break;
-        case 'logar':
-            #code...
+        
+        case 'cadastraritem':
+            $inputTitulo = $_POST['titulo'];
+            $inputResumo = $_POST['subtitulo'];
+            $inputDetalhes = $_POST['detalhes'];
+            $inputCategoria = $_POST['categoria'];
+            $inputPreco = $_POST['preco'];
+            $inputImagem = $_POST['foto'];
+            echo $inputTitulo;
+            
+            $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}') ";
+            $resposta = $conn_sql->query($sql);
+
+            if($resposta==true){
+                echo 'Teste com resposta TRUE';
+                header("Location: ./page_cadastroconcluido-novoitem.php");
+            }else{
+                echo 'Teste com resposta FALSE';
+                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
+                header("Location: ./page_perfil.php");
+            }
+
             break;
+
+
         default:
-            # code...
             break;
     }
 

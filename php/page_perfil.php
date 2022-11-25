@@ -1,3 +1,6 @@
+<?php
+    require "autentica.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -21,8 +24,10 @@
         <link rel="stylesheet" href="../css/boxes/fichas.css">
         <link rel="stylesheet" href="../css/boxes/grades.css">
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
+        <link rel="stylesheet" href="../css/cabecalho/log.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
+        <link rel="stylesheet" href="../css/formularios.css">
         <link rel="stylesheet" href="../css/styles_perfil.css"/>
     </head>
 
@@ -46,6 +51,11 @@
                     </nav>
                 </div>
 
+                <div class="container-cabecalho__log">
+                    <p >Olá, <span style="font-weight:bold"> <?php echo $_SESSION['nome']; ?> </span></p>
+                    <span > Não é você, <a style="text-decoration:underline" href="logout.php">clique aqui</a>.</span>
+                </div>
+
             </div>
         </header>
         <!-- TÉRMINO CABEÇALHO-->
@@ -54,14 +64,36 @@
         <main class="principal">
             <section class="sections" id="principal__perfil">
                 <h2 class="titulosh2">Minha Conta</h2>
+                
                 <div id="divcontainer-principal__perfil__perfil">
                     <div class="divcontainer-principal__perfil__item" id="principal__perfil__perfil__resumo">
-                        <h3 class="titulosh3">Sobre</h3>
+                        <h3 class="titulosh3">Sobre Mim</h3>
+
+                        <div id="principal__perfil__perfil__resumo__profile">    
+                                <p>                               
+                                    <?php echo $_SESSION['descricao']; ?>          
+                                </p>                            
+                        </div>                       
                     </div>
                     <div class="divcontainer-principal__perfil__item" id="principal__perfil__perfil__conta">
                         <h3 class="titulosh3">Configurações</h3>
+
+                            
+                            <div class="div-botoes-center">
+                                <button class="todos-botoes">
+                                    <a href="./page_perfil-editar.php">Editar Perfil</a>
+                                </button>
+                                <button class="todos-botoes">
+                                    <a href="logout.php">Encerrar Sessão</a>
+                                </button>
+                                <button  class="todos-botoes">
+                                    <a href="logout.php">Exluir Conta</a>
+                                </button>
+                            </div>
+
                     </div>
                 </div>
+
                 <div class="divcontainer-principal__perfil__item" id="divcontainer-principal__perfil__historico">
                     <h3 class="titulosh3">Últimas Transanções</h3>
 

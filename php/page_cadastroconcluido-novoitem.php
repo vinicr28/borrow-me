@@ -56,10 +56,8 @@
             <section class="sections secoes-cadastrosconcluidos">
                 <div class="div-box-cadastrosconcluidos">
                     <img src="../medias/svg/check-ico.svg" alt="">
-                    <h3 class="titulosh3">Cadastro realizado com sucesso!</h3>
-                    <button class="todos-botoes" id="btt-primeiroLogin">
-                        <a href="page_login.php">Entrar na Minha Conta</a>
-                    </button>
+                    <h3 class="titulosh3">Item cadastrado com sucesso!</h3>
+                    <a href="page_perfil.php" class="todos-botoes">Minha Conta</a>
                 </div>
             </section>
         </main>

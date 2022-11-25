@@ -1,7 +1,65 @@
 .field-cadastro {
     display: flex;
+    padding: 1rem;
+    width: 100%;
+}
+.container-form-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #box-form-dadospessoais {
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#div-nome { 
+    width: 100%;
+}
+#div-nome input { 
+    width: 95%;
+}
+
+#div-cpf input { 
+    width: 100%;
+}
+
+#box-form-contato {
+    justify-content: space-between;
+}
+
+#select-categoria {
+    outline: none;
+    border: 2px solid #F2B707;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#box-form-login {
+    flex-direction: column;
+}
+
+#div-email {
+    width: 100%;
+}
+
+#div-email input {
+    width: 95%;
+}
+
+#div-input-senhas {
     display: flex;
+    justify-content: space-between;
+}
+
+#div-input-senhas input {
+    width: 90%;
+}
+
+#div-botoes-center {
+    margin: 1rem;
+    text-align: center;
 }

@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="../css/boxes/fichas.css">
         <link rel="stylesheet" href="../css/boxes/grades.css">
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
+        <link rel="stylesheet" href="../css/cabecalho/log.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
         <link rel="stylesheet" href="../css/styles_home.css"/>
@@ -52,9 +53,8 @@
                 </div>
 
                 <div class="container-cabecalho__log">
-                    <p>Navegando como <?php echo $_SESSION['nome']; ?> </p>
-                    <span> Não é você, <a href="logout.php">clique aqui</a>.</span>
-
+                    <p >Olá, <span style="font-weight:bold"> <?php echo $_SESSION['nome']; ?> </span></p>
+                    <span > Não é você, <a style="text-decoration:underline" href="logout.php">clique aqui</a>.</span>
                 </div>
 
             </div>

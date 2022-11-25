@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
 .secoes-formularios {
     display: flex;
@@ -9,13 +12,13 @@
 }
 
 .div-box-todos-formularios {
-    background-color: #0734F2;
+    background-color: var(--azulEscuro);
     height: 700px;
     width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #F2B707;
+    border: 2px solid var(--amareloPrincipal);
     border-radius: 30px;
     box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.40);
 }
@@ -36,7 +39,7 @@ form label {
 
 form input {
   outline: none;
-  border:2px solid #F2B707;
+  border:2px solid var(--amareloPrincipal);
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 5px;
@@ -47,7 +50,7 @@ form input:focus {
 }
 
 form input[type=submit] {
-    background-color: #F2B707;
+    background-color: var(--amareloPrincipal);
     color: black;
     font-size: 17px;
     font-weight: 600;
@@ -65,4 +68,5 @@ form input[type=submit]:hover {
     color: white;
     font-weight: 100;
 }
+
 

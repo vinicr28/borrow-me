@@ -1,0 +1,89 @@
+#divcontainer-principal__perfil__perfil {
+    width: 100%;
+    justify-content: center;
+}
+#principal__perfil__perfil__conta {
+    background-color: var(--azulEscuro);
+    width: 80%;
+    margin: 0 auto;
+}
+
+#principal__perfil__perfil__conta__form {
+    width: 80%;
+}
+
+.field-cadastro {
+    display: flex;
+    padding: 1rem 0.5rem;
+    width: 95%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+form input {
+    outline: none;
+    border: 2px solid var(--amareloPrincipal);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+
+
+
+#div-nome { 
+    width: 50%;
+}
+#div-nome input { 
+    width: 95%;
+}
+
+#div-cpf { 
+    width: 30%;
+}
+#div-cpf input { 
+    width: 95%;
+}
+
+#div-dn {
+    width: 20%;
+}
+#div-dn input {
+    width: 95%;
+}
+
+
+
+#select-categoria {
+    outline: none;
+    border: 2px solid #F2B707;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+#div-email {
+    width: 60%;
+}
+
+#div-email input {
+    width: 95%;
+}
+
+#div-senha {
+    width: 35%;
+}
+
+#div-senha input {
+    width: 95%;
+}
+
+.div-botoes-center {
+    margin: 1rem;
+    text-align: center;
+}
+
+

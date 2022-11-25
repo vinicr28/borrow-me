@@ -13,8 +13,19 @@
     margin: 0.5rem;
 }
 
+#principal__perfil__perfil__conta {
+    background-color: var(--brancoAmeno);
+}
+
+.div-botoes-center {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: center;
+    padding: 0 auto;
+}
+
 #divcontainer-principal__perfil__historico {
     min-height: 150px;
     max-height: 150px;
 }
-

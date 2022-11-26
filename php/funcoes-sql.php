@@ -160,17 +160,29 @@
 
             $sql = "SELECT * FROM todosprodutos WHERE cod = '$currenteCOD' ";
             $resposta = $conn_sql->query($sql);
-            $row = $resposta->fetch_object();
-            var_dump($row);
-
+            $qtdReg = mysqli_num_rows($resposta);
+            //$row = $resposta->fetch_object();
             
-            
+            if ($qtdReg > 0) {
+                $row = mysqli_fetch_assoc($resposta);
+                var_dump($row);
+                $cod = $row['cod'];
+                $titulo = $row['titulo'];
+                $descricao = $row['resumo'];
+                $detalhes = $row['detalhes'];
+                $categoria = $row['categoria'];
+                $preco = $row['preco'];
+                $imagem = $row['imagem'];
+                $idProprietario = $row['id_proprietario'];
+                
 
+                header("Location: ./page_produto.php");
+            } 
+            else {
+                header("Location: ./page_home.php");
+            }
 
-
-
-
-
+            break;
 
 
 

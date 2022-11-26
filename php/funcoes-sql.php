@@ -21,11 +21,11 @@
             $novo_user = array('nome'=> $inputNome, 'cpf'=> $inputCPF, 'dn'=> $inputDN, 'cep'=> $inputCEP, 'uf'=> $inputUF, 'tel'=> $inputTel, 'email'=> $inputEmail, 'senha'=> $inputSenha,);
             $resposta = $conn_pdo->prepare(" INSERT INTO todosusuarios (nome,cpf,data_nascimento,cep,uf,telefone,email,senha) VALUES (:nome,:cpf,:dn,:cep,:uf,:tel,:email,:senha) ");
             $resposta->bindParam(':nome', $novo_user['nome'], PDO::PARAM_STR);
-            $resposta->bindParam(':cpf', $novo_user['cpf'], PDO::PARAM_STR);
-            $resposta->bindParam(':dn', $novo_user['dn'], PDO::PARAM_STR);
-            $resposta->bindParam(':cep', $novo_user['cep'], PDO::PARAM_STR);
+            $resposta->bindParam(':cpf', $novo_user['cpf'], PDO::PARAM_INT);
+            $resposta->bindParam(':dn', $novo_user['dn']);
+            $resposta->bindParam(':cep', $novo_user['cep'], PDO::PARAM_INT);
             $resposta->bindParam(':uf', $novo_user['uf'], PDO::PARAM_STR);
-            $resposta->bindParam(':tel', $novo_user['tel'], PDO::PARAM_STR);
+            $resposta->bindParam(':tel', $novo_user['tel'], PDO::PARAM_INT);
             $resposta->bindParam(':email', $novo_user['email'], PDO::PARAM_STR);
             $resposta->bindParam(':senha', $novo_user['senha'], PDO::PARAM_STR);
 
@@ -138,9 +138,10 @@
             $inputCategoria = $_POST['categoria'];
             $inputPreco = $_POST['preco'];
             $inputImagem = $_POST['foto'];
+            $currentID = $_SESSION['id'];
             echo $inputTitulo;
             
-            $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}') ";
+            $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem, id_proprietario) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}', '{$currentID}' ) ";
             $resposta = $conn_sql->query($sql);
 
             if($resposta==true){
@@ -152,6 +153,24 @@
                 header("Location: ./page_perfil.php");
             }
             break;
+
+        
+        case 'visualizaranuncio':
+            $currenteCOD = $_POST['cCOD'];
+
+            $sql = "SELECT * FROM todosprodutos WHERE cod = '$currenteCOD' ";
+            $resposta = $conn_sql->query($sql);
+            $row = $resposta->fetch_object();
+            var_dump($row);
+
+            
+            
+
+
+
+
+
+
 
 
 

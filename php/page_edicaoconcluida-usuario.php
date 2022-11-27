@@ -1,17 +1,10 @@
-<?php
-
-    require 'funcoes-gerais.php';
-    require 'funcoes-sql.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Borrow.me</title>
+        <title>Conta Criada! - Borrow.me</title>
 
         <!-- FAVICON -->
         <link rel="apple-touch-icon" sizes="180x180" href="../medias/favicon/apple-touch-icon.png">
@@ -28,11 +21,10 @@
         <link rel="stylesheet" href="../css/boxes/fichas.css">
         <link rel="stylesheet" href="../css/boxes/grades.css">
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
-        <link rel="stylesheet" href="../css/cabecalho/log.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
         <link rel="stylesheet" href="../css/formularios.css">
-        <link rel="stylesheet" href="../css/styles_perfil.css"/>
+        <link rel="stylesheet" href="../css/styles_cadastrosconcluidos.css">
     </head>
 
     <body>
@@ -55,31 +47,25 @@
                     </nav>
                 </div>
 
-                <div class="container-cabecalho__log">
-                    <p >Olá, <span style="font-weight:bold"> <?php echo $_SESSION['nome']; ?> </span></p>
-                    <span > Não é você, <a style="text-decoration:underline" href="logout.php">clique aqui</a>.</span>
-                </div>
-
             </div>
         </header>
         <!-- TÉRMINO CABEÇALHO-->
 
-        <main>
-            <img src="" alt="">
+        <main class="main">
 
-
-
-
-
+            <section class="sections secoes-cadastrosconcluidos">
+                <div class="div-box-cadastrosconcluidos">
+                    <img src="../medias/svg/check-ico.svg" alt="">
+                    <h3 class="titulosh3">Perfil Atualizado com Sucesso!</h3>
+                    <a href="page_perfil.php" class="todos-botoes">Minha Conta</a>
+                </div>
+            </section>
         </main>
 
-
-
-
-    </body>
-
 <?php
+require_once('funcoes-gerais.php');
 
-    require_once('footer.php');
+
+require_once('footer.php');
 
 ?>

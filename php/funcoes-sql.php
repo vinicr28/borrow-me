@@ -14,6 +14,7 @@
     switch ($_REQUEST["acao"]) {
         
         
+
         case 'criarconta':
             $inputNome = $_POST['nome'];
             $inputCPF = $_POST['cpf'];
@@ -28,11 +29,11 @@
             $novo_user = array('nome'=> $inputNome, 'cpf'=> $inputCPF, 'dn'=> $inputDN, 'cep'=> $inputCEP, 'uf'=> $inputUF, 'tel'=> $inputTel, 'email'=> $inputEmail, 'senha'=> $inputSenha,);
             $resposta = $conn_pdo->prepare(" INSERT INTO todosusuarios (nome,cpf,data_nascimento,cep,uf,telefone,email,senha) VALUES (:nome,:cpf,:dn,:cep,:uf,:tel,:email,:senha) ");
             $resposta->bindParam(':nome', $novo_user['nome'], PDO::PARAM_STR);
-            $resposta->bindParam(':cpf', $novo_user['cpf'], PDO::PARAM_STR);
-            $resposta->bindParam(':dn', $novo_user['dn'], PDO::PARAM_STR);
-            $resposta->bindParam(':cep', $novo_user['cep'], PDO::PARAM_STR);
+            $resposta->bindParam(':cpf', $novo_user['cpf'], PDO::PARAM_INT);
+            $resposta->bindParam(':dn', $novo_user['dn']);
+            $resposta->bindParam(':cep', $novo_user['cep'], PDO::PARAM_INT);
             $resposta->bindParam(':uf', $novo_user['uf'], PDO::PARAM_STR);
-            $resposta->bindParam(':tel', $novo_user['tel'], PDO::PARAM_STR);
+            $resposta->bindParam(':tel', $novo_user['tel'], PDO::PARAM_INT);
             $resposta->bindParam(':email', $novo_user['email'], PDO::PARAM_STR);
             $resposta->bindParam(':senha', $novo_user['senha'], PDO::PARAM_STR);
 
@@ -46,6 +47,7 @@
             }
 
             break;
+
 
         
         case 'logar':
@@ -69,7 +71,7 @@
                 $_SESSION['tel'] = $row['telefone'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['senha'] = $row['senha'];
-                $_SESSION['descricao'] = $row['profile'];
+                $_SESSION['descricao'] = $row['about_me'];
 
                 header("Location: ./page_home.php");
             } 
@@ -80,8 +82,10 @@
             break;
         
 
+
         case 'editar':
             $currentID = $_POST['cID'];
+            $inputAbout = $_POST['aboutme'];
             $inputNome = $_POST['nome'];
             $inputCPF = $_POST['cpf'];
             $inputDN = $_POST['datanasc'];
@@ -94,29 +98,47 @@
 
             $sql = "UPDATE todosusuarios SET
                         nome='{$inputNome}',
+                        about_me='{$inputAbout}',
                         cpf='{$inputCPF}',
-                        data_nascimento='{$inputDN}'
-
+                        data_nascimento='{$inputDN}',
+                        cep='{$inputCEP}',
+                        uf='{$inputUF}',
+                        telefone='{$inputTel}',
+                        email='{$inputEmail}',
+                        senha='{$inputSenha}'
                     WHERE 
                         id=".$currentID;
             $resposta = $conn_sql->query($sql);
 
             if($resposta==true){
                 echo 'Teste com resposta TRUE';
-                header("Location: ./page_cadastroconcluido-novoitem.php");
+                header("Location: ./page_edicaoconcluida-usuario.php");
             }else{
                 echo 'Teste com resposta FALSE';
                 print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
                 header("Location: ./page_perfil.php");
             }
+            break;
+        
+        
 
+        case 'excluirconta':
+            $currentID = $_POST['cID'];
+            $sql = "DELETE FROM todosusuarios WHERE id=".$currentID;
+            $resposta = $conn_sql->query($sql);
+
+            if($resposta==true){
+                echo 'Teste com resposta TRUE';
+                header("Location: ../index.php");
+            }else{
+                echo 'Teste com resposta FALSE';
+                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
+                header("Location: ./page_perfil.php");
+            }
             break;
         
-        
-        case 'excluir':
-            #code...
-            break;
-        
+
+
         case 'cadastraritem':
             $inputTitulo = $_POST['titulo'];
             $inputResumo = $_POST['subtitulo'];
@@ -124,9 +146,10 @@
             $inputCategoria = $_POST['categoria'];
             $inputPreco = $_POST['preco'];
             $inputImagem = $_POST['foto'];
+            $currentID = $_SESSION['id'];
             echo $inputTitulo;
             
-            $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}') ";
+            $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem, id_proprietario) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}', '{$currentID}' ) ";
             $resposta = $conn_sql->query($sql);
 
             if($resposta==true){
@@ -137,8 +160,38 @@
                 print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
                 header("Location: ./page_perfil.php");
             }
+            break;
+
+        
+        case 'visualizaranuncio':
+            $currenteCOD = $_POST['cCOD'];
+
+            $sql = "SELECT * FROM todosprodutos WHERE cod = '$currenteCOD' ";
+            $resposta = $conn_sql->query($sql);
+            $qtdReg = mysqli_num_rows($resposta);
+            //$row = $resposta->fetch_object();
+            
+            if ($qtdReg > 0) {
+                $row = mysqli_fetch_assoc($resposta);
+                var_dump($row);
+                $cod = $row['cod'];
+                $titulo = $row['titulo'];
+                $descricao = $row['resumo'];
+                $detalhes = $row['detalhes'];
+                $categoria = $row['categoria'];
+                $preco = $row['preco'];
+                $imagem = $row['imagem'];
+                $idProprietario = $row['id_proprietario'];
+                
+
+                header("Location: ./page_produto.php");
+            } 
+            else {
+                header("Location: ./page_home.php");
+            }
 
             break;
+
 
 
         default:

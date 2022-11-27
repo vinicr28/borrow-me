@@ -1,3 +1,7 @@
+<?php
+    require "autentica.php";
+    require "funcoes-sql.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -21,6 +25,7 @@
         <link rel="stylesheet" href="../css/boxes/fichas.css">
         <link rel="stylesheet" href="../css/boxes/grades.css">
         <link rel="stylesheet" href="../css/cabecalho/cabecalho.css">
+        <link rel="stylesheet" href="../css/cabecalho/log.css">
         <link rel="stylesheet" href="../css/rodape/rodape.css">
         <link rel="stylesheet" href="../css/titulos/titulos.css">
         <link rel="stylesheet" href="../css/formularios.css">
@@ -47,6 +52,10 @@
                     </nav>
                 </div>
 
+                <div class="container-cabecalho__log">
+                    <p >Olá, <span style="font-weight:bold"> <?php echo $_SESSION['nome']; ?> </span></p>
+                    <span > Não é você, <a style="text-decoration:underline" href="logout.php">clique aqui</a>.</span>
+                </div>
             </div>
         </header>
         <!-- TÉRMINO CABEÇALHO-->
@@ -57,32 +66,46 @@
                 <section class="sections secoes-formularios" id="secao-requisita">
                     
                     
-                    <div class="div-box-todos-formularios">
+                    <div class="div-box-todos-formularios" id="requisita__form">
                         <h2 class="titulosh2">Requisição</h2>
 
-                        <form action="./perfil-usuario.html" class="principal__requisita__formulario">
-                        
-                            <fieldset class="principal__requisita__formulario__fieldsets" id="fieldset__solicitante">
-                                <legend class="titulosh3">Meus Dados</legend>
-                                <div class="div-fieldsets__cadainfo">
-                                    <input name="nome" id="nome" class="input" type="text" placeholder="Nome" data-tipo="nome" required>
-                                    <label class="input-label" for="nome">Nome</label>
+                        <form action="funcoes-sql.php" method="POST">
+                            
+                        <fieldset class="fields-requisicao" id="box-form-dadospessoais">
+                            <legend class="titulosh3">Solicitante</legend>    
+                            <div id="div-nome">
+                                    <label>Nome</label><br>
+                                    <input type="text" placeholder="<?php echo $_SESSION['nome']; ?> " value="<?php echo $_SESSION['nome']; ?>" name="nome" disabled=""/>
                                 </div>
-                                <div class="div-fieldsets__cadainfo">
-                                    <input name="email" id="email" class="input" type="email" placeholder="Email" data-tipo="email" required>
-                                    <label class="input-label" for="email">Email</label>
+                                <!-- -->
+                                <div id="div-cpf">
+                                    <label>CPF</label><br>
+                                    <input type="text" placeholder="<?php echo $_SESSION['cpf']; ?> " value="<?php echo $_SESSION['cpf']; ?>" name="cpf" disabled=""/>  
                                 </div>
-                                <div class="div-fieldsets__cadainfo">
-                                    <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" data-tipo="cpf" required>
-                                    <label class="input-label" for="cpf">CPF</label>
+                                <div id="div-email">
+                                    <label>Email</label><br>
+                                    <input type="email" placeholder="<?php echo $_SESSION['email']; ?> " value="<?php echo $_SESSION['email']; ?>" name="email" disabled=""/>
                                 </div>
                             </fieldset>
 
-                            <fieldset  class="principal__requisita__formulario__fieldsets" id="fieldset__requisicao">
+
+                            <fieldset class="fields-requisicao">
                                 <legend class="titulosh3">Dados da Requisição</legend>
-                                <div class="div-fieldsets__cadainfo">
-                                    <label class="input-label" for="categoria">Categoria do Produto Desejado</label>
+                                <div id="div-produto">
+                                    <label>Item</label>
                                     <select name="categoria">
+                                        <?php
+                                            
+                                        ?>
+
+
+
+
+
+
+
+
+
                                         <option value="Produto1">Produto 1</option>
                                         <option value="Produto2">Produto 2</option>
                                         <option value="Produto3">Produto 3</option>
@@ -90,15 +113,15 @@
                                 </div>
                         
                                 <div class="div-fieldsets__cadainfo">
-                                    <input name="dataretirada" id="dataretirada" class="input" type="date" placeholder="Data de Retirada" data-tipo="dataRetirada" required>
-                                    <label class="input-label" for="retirada">Data de Retirada</label>
+                                    <label for="retirada">Data de Retirada</label><br>
+                                    <input name="dataretirada" type="date" required>
                                 </div>
                                 <div class="div-fieldsets__cadainfo">
-                                    <input name="datadevolucao" id="datadevolucao" class="input" type="date" placeholder="Data de Devolulção" data-tipo="dataDevolucao" required>
-                                    <label class="input-label" for="devolucao">Data de Devolução</label>
+                                    <label for="devolucao">Data de Devolução</label><br>
+                                    <input name="datadevolucao" type="date" required>
                                 </div>
                             </fieldset>
-                            <button type="submit" class="todos-botoes">Solicitar</a>
+                            <button type="submit" class="todos-botoes" id="btt-solicitar">Solicitar</a>
                         </form>
                     </div>
     

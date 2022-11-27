@@ -2,6 +2,19 @@
 
     require 'funcoes-gerais.php';
     require 'funcoes-sql.php';
+    require_once('../mockup/mock.php');
+
+    if  (isset($_GET['cod'])) {
+
+        $postId = $_GET['cod'];
+        $currentPost;
+
+        foreach($posts as $post) {
+            if($post['cod'] == $postId) {
+                $currentPost = $post;
+            }
+        }
+    }
 
 ?>
 
@@ -33,6 +46,7 @@
         <link rel="stylesheet" href="../css/titulos/titulos.css">
         <link rel="stylesheet" href="../css/formularios.css">
         <link rel="stylesheet" href="../css/styles_perfil.css"/>
+        <link rel="stylesheet" href="../css/styles_produto_unico.css"/>
     </head>
 
     <body>
@@ -65,12 +79,22 @@
         <!-- TÉRMINO CABEÇALHO-->
 
         <main>
-            <img src="" alt="">
-
-
-
-
-
+            <div class="img">
+                <img src="<?= $currentPost['img'] ?>">
+            </div>
+            <div class="title">
+                <h1><?= $currentPost['title'] ?></h1>
+            </div>
+            <div class="description">
+                <p><?= $currentPost['description'] ?></p>
+            </div>
+            <div class="price">
+                <p>A partir de: <?= $currentPost['price'] ?></p>
+            </div>
+            <div class="button">
+                <button>Emprestar</button>
+            </div>
+            
         </main>
 
 

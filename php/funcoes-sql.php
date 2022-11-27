@@ -1,7 +1,7 @@
 <?php
     include('config.php');
     require_once('funcoes-gerais.php');
-    require_once("./Menssage.php");
+    require_once("Menssage.php");
 
     $message = new Menssage($BASE_URL);
     $flassMessage = $message->getMessage();
@@ -76,7 +76,11 @@
                 header("Location: ./page_home.php");
             } 
             else {
-                $message->setMessage("Usuario incorreto! Tente novamente.", "error", "back");
+                echo "<div align='center'>
+                <h1>Usuario e/ou senha invalido(s)!</h1>
+                </div>";
+                echo "<meta http-equiv='refresh' content='2;URL=page_login.php'>";
+                
             }
 
             break;

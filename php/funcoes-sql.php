@@ -76,7 +76,11 @@
                 header("Location: ./page_home.php");
             } 
             else {
-                $message->setMessage("Usuario incorreto! Tente novamente.", "error", "back");
+                echo "<div align='center'>
+                <h1>Usuario e/ou senha invalido(s)!</h1>
+                </div>";
+                echo "<meta http-equiv='refresh' content='2;URL=page_login.php'>";
+                
             }
 
             break;

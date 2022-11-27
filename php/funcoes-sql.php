@@ -1,6 +1,14 @@
 <?php
     include('config.php');
     require_once('funcoes-gerais.php');
+    require_once("./Menssage.php");
+
+    $message = new Menssage($BASE_URL);
+    $flassMessage = $message->getMessage();
+
+    if (!empty($flassMessage["msg"])) {
+        $message->clearMessage();
+    } 
 
 
     switch ($_REQUEST["acao"]) {
@@ -66,7 +74,7 @@
                 header("Location: ./page_home.php");
             } 
             else {
-                header("Location: ./page_login.php");
+                $message->setMessage("Usuario incorreto! Tente novamente.", "error", "back");
             }
 
             break;

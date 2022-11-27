@@ -70,6 +70,8 @@
                         <h2 class="titulosh2">Requisição</h2>
 
                         <form action="funcoes-sql.php" method="POST">
+                        <input type="hidden" name="acao" value="registraremprestimo">
+                        <input type="hidden" name="cCOD" value="<?php echo $currentCOD; ?>">
                             
                         <fieldset class="fields-requisicao" id="box-form-dadospessoais">
                             <legend class="titulosh3">Solicitante</legend>    
@@ -91,25 +93,19 @@
 
                             <fieldset class="fields-requisicao">
                                 <legend class="titulosh3">Dados da Requisição</legend>
-                                <div id="div-produto">
-                                    <label>Item</label>
-                                    <select name="categoria">
-                                        <?php
-                                            
-                                        ?>
+                                <div class="div-fieldsets__cadainfo" id="div-produto">
+                                    <label for=""></label>
+                                    <input type="text" value="<?php echo $row->titulo; ?>" name="titulo">
 
+                                    <label for=""></label>
+                                    <input type="text" value="<?php echo $row->resumo; ?>" name="subtitulo">
 
+                                    <label for=""></label>
+                                    <input type="text" value="<?php echo $row->detalhes; ?>" name="detalhes">
 
+                                    <label for=""></label>
+                                    <input type="" value="<?php echo $row->preco; ?>" name="preco">
 
-
-
-
-
-
-                                        <option value="Produto1">Produto 1</option>
-                                        <option value="Produto2">Produto 2</option>
-                                        <option value="Produto3">Produto 3</option>
-                                    </select>
                                 </div>
                         
                                 <div class="div-fieldsets__cadainfo">
@@ -121,7 +117,10 @@
                                     <input name="datadevolucao" type="date" required>
                                 </div>
                             </fieldset>
-                            <button type="submit" class="todos-botoes" id="btt-solicitar">Solicitar</a>
+
+                            <button type="submit" class="todos-botoes" id="btt-solicitar">
+                                Solicitar
+                            </button>
                         </form>
                     </div>
     

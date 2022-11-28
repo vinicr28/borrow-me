@@ -1,6 +1,15 @@
 <?php
     require "autentica.php";
     require "funcoes-sql.php";
+
+    $currentCOD = 7;
+    echo $currentCOD;
+    $sql = "SELECT * FROM todosprodutos WHERE cod = '$currentCOD' ";
+    $resposta = $conn_sql->query($sql);
+    $item = mysqli_fetch_assoc($resposta);
+    var_dump($item);
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -72,21 +81,22 @@
                         <form action="funcoes-sql.php" method="POST">
                         <input type="hidden" name="acao" value="registraremprestimo">
                         <input type="hidden" name="cCOD" value="<?php echo $currentCOD; ?>">
-                            
+                        <input type="hidden" name="cID" value="<?php echo $_SESSION['id'] ?>">    
+
                         <fieldset class="fields-requisicao" id="box-form-dadospessoais">
                             <legend class="titulosh3">Solicitante</legend>    
                             <div id="div-nome">
                                     <label>Nome</label><br>
-                                    <input type="text" placeholder="<?php echo $_SESSION['nome']; ?> " value="<?php echo $_SESSION['nome']; ?>" name="nome" disabled=""/>
+                                    <input type="text" placeholder="<?php echo $_SESSION['nome']; ?> " value="<?php echo $_SESSION['nome']; ?>" name="nome" disabled="">
                                 </div>
                                 <!-- -->
                                 <div id="div-cpf">
                                     <label>CPF</label><br>
-                                    <input type="text" placeholder="<?php echo $_SESSION['cpf']; ?> " value="<?php echo $_SESSION['cpf']; ?>" name="cpf" disabled=""/>  
+                                    <input type="text" placeholder="<?php echo $_SESSION['cpf']; ?> " value="<?php echo $_SESSION['cpf']; ?>" name="cpf" disabled="">  
                                 </div>
                                 <div id="div-email">
                                     <label>Email</label><br>
-                                    <input type="email" placeholder="<?php echo $_SESSION['email']; ?> " value="<?php echo $_SESSION['email']; ?>" name="email" disabled=""/>
+                                    <input type="email" placeholder="<?php echo $_SESSION['email']; ?> " value="<?php echo $_SESSION['email']; ?>" name="email" disabled="">
                                 </div>
                             </fieldset>
 
@@ -95,16 +105,16 @@
                                 <legend class="titulosh3">Dados da Requisição</legend>
                                 <div class="div-fieldsets__cadainfo" id="div-produto">
                                     <label for=""></label>
-                                    <input type="text" value="<?php echo $row->titulo; ?>" name="titulo">
+                                    <input type="text" placeholder="<?php echo $item["titulo"]; ?>" value="<?php echo $item["titulo"]; ?>" name="titulo" disabled="">
 
                                     <label for=""></label>
-                                    <input type="text" value="<?php echo $row->resumo; ?>" name="subtitulo">
+                                    <input type="text" placeholder="<?php echo $item["resumo"]; ?>" value="<?php echo $item["subtitulo"]; ?>" name="subtitulo" disabled="">
 
                                     <label for=""></label>
-                                    <input type="text" value="<?php echo $row->detalhes; ?>" name="detalhes">
+                                    <input type="text" placeholder="<?php echo $item["detalhes"]; ?>" value="<?php echo $item["detalhes"]; ?>" name="detalhes" disabled="">
 
                                     <label for=""></label>
-                                    <input type="" value="<?php echo $row->preco; ?>" name="preco">
+                                    <input type="" placeholder="<?php echo $item["preco"]; ?>" value="<?php echo $item["preco"]; ?>" name="preco" disabled="">
 
                                 </div>
                         

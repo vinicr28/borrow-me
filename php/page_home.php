@@ -78,7 +78,7 @@
                 <div class="div-container__grades">
 
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="../html/automoveis.html">
+                        <a href="./automoveis.php">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Automóveis
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/1500610/pexels-photo-1500610.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="../html/jogos.html">
+                        <a href="./jogos.php">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Jogos
@@ -97,7 +97,7 @@
                         </a>
                     </div>
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="../html/esportes.html">
+                        <a href="./esportes.php">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Esportes
@@ -106,7 +106,7 @@
                         </a>
                     </div>
                     <div class="div-grades__item" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600');">
-                        <a href="../html/acomodacoes.html">
+                        <a href="./acomodacoes.php">
                             <div class="div-grades__item__areatexto">
                                 <div>
                                     Acomodação
@@ -132,12 +132,17 @@
                         <p class="cards__item__descricao">
                             Montain Bike da marca Santa Cruz
                         </p>
+<<<<<<< HEAD
                         <p class="cards__item__price">R$52,00</p>
                         <form action="funcoes-sql.php" method="GET">
                             <input type="hidden" name="acao" value="visualizaranuncio">
                             <input type="hidden" name="cCOD" value="7">
                             <button type="submit" class="todos-botoes">saiba mais</button>
                         </form>
+=======
+                        <p class="cards__item__price">a partir de R$52,00</p>
+                        <button class="todos-botoes"><a href="./page_produto.php?cod=1">saiba mais</a></button>
+>>>>>>> f265853de339e3f4499def23bd706d5d530f10ca
                     </div>
                     <div class="div-cards__item">
                         <div class="div-cards__item__imagem" style="background-image: url('../bd/apartamentoipanema.png');"></div>
@@ -147,12 +152,17 @@
                         <p class="cards__item__descricao">
                             Apartamento na Barra da Tijuca com 180m<sup>2</sup>
                         </p>
+<<<<<<< HEAD
                         <p class="cards__item__price">R$250,00</p>
                         <form action="funcoes-sql.php" method="GET">
                             <input type="hidden" name="acao" value="visualizaranuncio">
                             <input type="hidden" name="cCOD" value="4">
                             <button type="submit" class="todos-botoes">saiba mais</button>
                         </form>
+=======
+                        <p class="cards__item__price">a partir de R$500,00</p>
+                        <button class="todos-botoes"><a href="./page_produto.php?cod=2">saiba mais</a></button>
+>>>>>>> f265853de339e3f4499def23bd706d5d530f10ca
                     </div>
                     <div class="div-cards__item">
                         <div class="div-cards__item__imagem" style="background-image: url('../bd/carroapple.jpg');"></div>
@@ -162,12 +172,17 @@
                         <p class="cards__item__descricao">
                             Novo lançamento da Apple, carro eletrico!
                         </p>
+<<<<<<< HEAD
                         <p class="cards__item__price">R$500</p>
                         <form action="funcoes-sql.php" method="GET">
                             <input type="hidden" name="acao" value="visualizaranuncio">
                             <input type="hidden" name="cCOD" value="6">
                             <button type="submit" class="todos-botoes">saiba mais</button>
                         </form>
+=======
+                        <p class="cards__item__price">a partir de R$1.350,00</p>
+                        <button class="todos-botoes"><a href="./page_produto.php?cod=3">saiba mais</a></button>
+>>>>>>> f265853de339e3f4499def23bd706d5d530f10ca
                     </div>
                     <div class="div-cards__item">
                         <div class="div-cards__item__imagem" style="background-image: url('../bd/novomac.jpg');"></div>
@@ -177,12 +192,17 @@
                         <p class="cards__item__descricao">
                             Macbook Apple 2021
                         </p>
+<<<<<<< HEAD
                         <p class="cards__item__price">R$100,00</p>
                         <form action="funcoes-sql.php" method="GET">
                             <input type="hidden" name="acao" value="visualizaranuncio">
                             <input type="hidden" name="cCOD" value="1">
                             <button type="submit" class="todos-botoes">saiba mais</button>
                         </form>
+=======
+                        <p class="cards__item__price">a partir de R$150,00</p>
+                        <button class="todos-botoes"><a href="./page_produto.php?cod=4">saiba mais</a></button>
+>>>>>>> f265853de339e3f4499def23bd706d5d530f10ca
                     </div>
                     <div class="div-cards__item">
                         <div class="div-cards__item__imagem" style="background-image: url('../bd/raquetetenispraia.png');"></div>
@@ -192,12 +212,17 @@
                         <p class="cards__item__descricao">
                             Ótima raquete para uma tarde de beach tenis
                         </p>
+<<<<<<< HEAD
                         <p class="cards__item__price">R$35,00</p>
                         <form action="funcoes-sql.php" method="GET">
                             <input type="hidden" name="acao" value="visualizaranuncio">
                             <input type="hidden" name="cCOD" value="8">
                             <button type="submit" class="todos-botoes">saiba mais</button>
                         </form>
+=======
+                        <p class="cards__item__price">a partir de R$35,00</p>
+                        <button class="todos-botoes"><a href="./page_produto.php?cod=5">saiba mais</a></button>
+>>>>>>> f265853de339e3f4499def23bd706d5d530f10ca
                     </div>
                     <div class="div-cards__item">
                         <div class="div-cards__item__imagem" style="background-image: url('../bd/notefuturo.jpg');"></div>
@@ -207,12 +232,17 @@
                         <p class="cards__item__descricao">
                             Melhor notebook do mundo
                         </p>
+<<<<<<< HEAD
                         <p class="cards__item__price">R$3.000,00</p>
                         <form action="funcoes-sql.php" method="GET">
                             <input type="hidden" name="acao" value="visualizaranuncio">
                             <input type="hidden" name="cCOD" value="3">
                             <button type="submit" class="todos-botoes">saiba mais</button>
                         </form>
+=======
+                        <p class="cards__item__price">a partir de R$3.000,00</p>
+                        <button class="todos-botoes"><a href="./page_produto.php?cod=6">saiba mais</a></button>
+>>>>>>> f265853de339e3f4499def23bd706d5d530f10ca
                     </div>
                 </div>
                 <div id="div-main__emalta__vermais">

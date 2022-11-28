@@ -223,14 +223,33 @@
 
 
 
-
-
-
-
-
-
         case 'registraremprestimo':
             $currentCOD = $_POST['cCOD'];
+            $dtRetirada = $_POST['dataretirada'];
+            $dtDevolucao = $_POST['dtdevolucao'];
+            $idSolicitante = $_POST['cID'];
+            echo $currentCOD;
+
+            $sql = "SELECT * FROM todosprodutos WHERE cod = '$currentCOD' ";
+            $resposta = $conn_sql->query($sql);
+            $item = mysqli_fetch_assoc($resposta);
+            var_dump($item);
+
+            $idProprietario = $item['id_proprietario'];
+            
+
+            $sql = "INSERT INTO todosemprestimos (id_proprietario, id_solicitante, cod_produto, dt_retirada, dt_devolucao) VALUES ('{$idProprietario}', '{$idSolicitante}', '{$currentCOD}', '{$dtRetirada}', '{$dtDevolucao}' ) ";
+            $resposta = $conn_sql->query($sql);
+
+
+            if($resposta==true){
+                echo 'Teste com resposta TRUE';
+                header("Location: page_requisicaoconcluida-emprestimo.php");
+            }else{
+                echo 'Teste com resposta FALSE';
+                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
+                header("Location: ./page_perfil.php");
+            }
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Nov-2022 às 18:18
+-- Tempo de geração: 28-Nov-2022 às 02:05
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -37,6 +37,18 @@ CREATE TABLE `todosemprestimos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `todosemprestimos`
+--
+
+INSERT INTO `todosemprestimos` (`log`, `id_proprietario`, `id_solicitante`, `cod_produto`, `dt_retirada`, `dt_devolucao`) VALUES
+(1, 2, 0, 7, '2022-11-29', '0000-00-00'),
+(2, 2, 0, 7, '2022-11-11', '0000-00-00'),
+(3, 2, 0, 7, '2022-11-11', '0000-00-00'),
+(4, 2, 0, 7, '2022-11-11', '0000-00-00'),
+(5, 2, 3, 7, '2022-11-29', '0000-00-00'),
+(6, 2, 3, 7, '2022-11-25', '0000-00-00');
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -54,7 +66,7 @@ ALTER TABLE `todosemprestimos`
 -- AUTO_INCREMENT de tabela `todosemprestimos`
 --
 ALTER TABLE `todosemprestimos`
-  MODIFY `log` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

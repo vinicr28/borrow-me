@@ -2,7 +2,7 @@
     require "autentica.php";
     require "funcoes-sql.php";
 
-    $currentCOD = 7;
+    $currentCOD = $_GET['cCOD'];
     echo $currentCOD;
     $sql = "SELECT * FROM todosprodutos WHERE cod = '$currentCOD' ";
     $resposta = $conn_sql->query($sql);
@@ -104,17 +104,17 @@
                             <fieldset class="fields-requisicao">
                                 <legend class="titulosh3">Dados da Requisição</legend>
                                 <div class="div-fieldsets__cadainfo" id="div-produto">
-                                    <label for=""></label>
-                                    <input type="text" placeholder="<?php echo $item["titulo"]; ?>" value="<?php echo $item["titulo"]; ?>" name="titulo" disabled="">
+                                    <label for="">Item</label><br>
+                                    <input class="inputs-produto" type="text" placeholder="<?php echo $item["titulo"]; ?>" value="<?php echo $item["titulo"]; ?>" name="titulo" disabled="">
 
-                                    <label for=""></label>
-                                    <input type="text" placeholder="<?php echo $item["resumo"]; ?>" value="<?php echo $item["subtitulo"]; ?>" name="subtitulo" disabled="">
+                                    <label for="">Informações</label><br>
+                                    <input class="inputs-produto" type="text" placeholder="<?php echo $item["resumo"]; ?>" value="<?php echo $item["subtitulo"]; ?>" name="subtitulo" disabled="">
 
-                                    <label for=""></label>
-                                    <input type="text" placeholder="<?php echo $item["detalhes"]; ?>" value="<?php echo $item["detalhes"]; ?>" name="detalhes" disabled="">
+                                    <label for="">Detalhes</label><br>
+                                    <input class="inputs-produto" id="input-detalhes" type="text" placeholder="<?php echo $item["detalhes"]; ?>" value="<?php echo $item["detalhes"]; ?>" name="detalhes" disabled="">
 
-                                    <label for=""></label>
-                                    <input type="" placeholder="<?php echo $item["preco"]; ?>" value="<?php echo $item["preco"]; ?>" name="preco" disabled="">
+                                    <label for="">Valor</label><br>
+                                    <input class="inputs-produto" id="input-preco" type="" placeholder="R$ <?php echo $item["preco"]; ?>" value="<?php echo $item["preco"]; ?>" name="preco" disabled="">
 
                                 </div>
                         

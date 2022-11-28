@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Nov-2022 às 02:05
+-- Tempo de geração: 28-Nov-2022 às 09:00
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `todosemprestimos` (
-  `log` int(11) NOT NULL,
+  `log_transacao` int(11) NOT NULL,
   `id_proprietario` int(11) NOT NULL,
   `id_solicitante` int(11) NOT NULL,
   `cod_produto` int(11) NOT NULL,
@@ -40,13 +40,13 @@ CREATE TABLE `todosemprestimos` (
 -- Extraindo dados da tabela `todosemprestimos`
 --
 
-INSERT INTO `todosemprestimos` (`log`, `id_proprietario`, `id_solicitante`, `cod_produto`, `dt_retirada`, `dt_devolucao`) VALUES
-(1, 2, 0, 7, '2022-11-29', '0000-00-00'),
-(2, 2, 0, 7, '2022-11-11', '0000-00-00'),
-(3, 2, 0, 7, '2022-11-11', '0000-00-00'),
-(4, 2, 0, 7, '2022-11-11', '0000-00-00'),
-(5, 2, 3, 7, '2022-11-29', '0000-00-00'),
-(6, 2, 3, 7, '2022-11-25', '0000-00-00');
+INSERT INTO `todosemprestimos` (`log_transacao`, `id_proprietario`, `id_solicitante`, `cod_produto`, `dt_retirada`, `dt_devolucao`) VALUES
+(1, 2, 2, 7, '2022-11-29', '2022-11-30'),
+(2, 2, 1, 7, '2022-11-11', '2022-11-14'),
+(3, 2, 5, 7, '2022-11-11', '2022-11-29'),
+(4, 2, 1, 7, '2022-11-11', '2022-11-16'),
+(12, 2, 3, 1, '2022-11-29', '2022-11-30'),
+(13, 4, 3, 3, '2022-11-30', '2022-12-03');
 
 --
 -- Índices para tabelas despejadas
@@ -56,7 +56,7 @@ INSERT INTO `todosemprestimos` (`log`, `id_proprietario`, `id_solicitante`, `cod
 -- Índices para tabela `todosemprestimos`
 --
 ALTER TABLE `todosemprestimos`
-  ADD PRIMARY KEY (`log`);
+  ADD PRIMARY KEY (`log_transacao`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -66,7 +66,7 @@ ALTER TABLE `todosemprestimos`
 -- AUTO_INCREMENT de tabela `todosemprestimos`
 --
 ALTER TABLE `todosemprestimos`
-  MODIFY `log` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `log_transacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

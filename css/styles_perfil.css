@@ -35,6 +35,23 @@
     color: black;
 }
 
-table {
-    border: solid 2px #000000;
+.tab-emprestimos {
+    
+    width: 80%;
+    margin: 1rem auto;
 }
+
+.tab-colunas {
+    border: solid 1px var(--amareloPrincipal);
+    border-spacing: 1rem;
+    width: 100px;
+    vertical-align: middle;
+}
+
+.tab-linhas {
+    border: solid 1px var(--amareloPrincipal);
+    height: 30px;
+    text-align: center;
+    
+}
+

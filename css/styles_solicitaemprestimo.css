@@ -1,5 +1,6 @@
 #requisita__form {
     flex-direction: column;
+    height: 800px;
 }
 
 form {
@@ -46,15 +47,22 @@ form {
     width: 100%;
 }
 
-#div-produto select {
+.inputs-produto {
     width: 100%;
-    outline: none;
-    border: 2px solid #F2B707;
-    border-radius: 20px;
-    padding: 10px;
-    margin-bottom: 5px;
-    font-size: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    color: black;
 }
+
+#input-detalhes {
+    height: 90px;
+}
+
+#input-preco {
+    width: 20%;
+}
+
 
 #btt-solicitar {
     width: 30%;

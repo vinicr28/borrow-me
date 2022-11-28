@@ -206,27 +206,10 @@
 
 
 
-        case 'prepararemprestimo':
-            $currentCOD = $_POST['cCOD'];
-            $recebidoTitulo = $_POST['titulo'];
-            $recebidoSubtitulo = $_POST['subtitulo'];
-            $recebidoDetalhes = $_POST['detalhes'];
-            $recebidoPreco = $_POST['preco'];
-           
-            echo "Prepara Empréstimo";
-            echo $currentCOD;
-            echo $recebidoTitulo;
-            
-            header("Location: ./page_solicitar-emprestimo.php");
-
-
-
-
-
         case 'registraremprestimo':
             $currentCOD = $_POST['cCOD'];
             $dtRetirada = $_POST['dataretirada'];
-            $dtDevolucao = $_POST['dtdevolucao'];
+            $dtDevolucao = $_POST['datadevolucao'];
             $idSolicitante = $_POST['cID'];
             echo $currentCOD;
 

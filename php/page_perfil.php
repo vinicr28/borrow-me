@@ -108,34 +108,59 @@
                 <h3 class="titulosh3">Meus Empréstimos</h3>
                 <div class="principal__naomeusprodutos__emuso">
 
-                    <table>
-                        <tr>
-                            <td>Produto</td>
-                            <td>Retirada</td>
-                            <td>Devolucao</td>
-                            <td></td>
+                    <table class="tab-emprestimos">
+                        <tr class="tab-linhas">
+                            <td class="tab-colunas">Transação</td>
+                            <td class="tab-colunas">Código Produto</td>
+                            <td class="tab-colunas">Descrição</td>
+                            <td class="tab-colunas">Retirada</td>
+                            <td class="tab-colunas">Devolucao</td>
+                            <td class="tab-colunas">ID Proprietário</td>
+                            <td class="tab-colunas">Valor Unitário</td>
                         </tr>
-
-
                         <?php 
-                            echo "Teste PHP";
-                            $sql = "SELECT id_solicitante, cod_produto, dt_retirada, dt_devolucao FROM todosemprestimos";
-                            echo $sql;
+                            // echo "Teste PHP";
+                            $sql = "SELECT log_transacao, id_proprietario, cod_produto, dt_retirada, dt_devolucao FROM todosemprestimos WHERE id_solicitante = '$currentID' ";
+                            
+                            
 
                             $resposta = mysqli_query($conn_sql, $sql);
-                            echo $resposta;
-
+                            // echo "<br>";
+                            // var_dump($resposta);
+                            // echo "Fim de Resposta <br>";
+            
                             if($resposta) {
-                                while($row = mysqli_fetch_assoc($resposta));
-                                echo $row;
-                                echo "<td>".$row['dt_retirada']."</td>    <td>     </td>";
+                                while($emprestimos = mysqli_fetch_assoc($resposta)){
+                                    $codProduto = $emprestimos['cod_produto'];
+                                    $sqlP = "SELECT * FROM todosprodutos WHERE cod = '$codProduto' ";
+                                    $resP = $conn_sql->query($sqlP);
+                                    $item = mysqli_fetch_assoc($resP);
+                                    //var_dump($item);
+                                    
+                                    
+
+
+                                    echo "<tr class=\"tab-linhas\">
+                                            <td class=\"tab-colunas\">".$emprestimos['log_transacao']."</td>
+                                            <td class=\"tab-colunas\">".$emprestimos['cod_produto']."</td>
+                                            <td class=\"tab-colunas\">".$item['titulo']."</td>
+                                            <td class=\"tab-colunas\">".$emprestimos['dt_retirada']."</td>
+                                            <td class=\"tab-colunas\">".$emprestimos['dt_devolucao']."</td>
+                                            <td class=\"tab-colunas\">".$emprestimos['id_proprietario']."</td>
+                                            <td class=\"tab-colunas\">R$ ".$item['preco'].",00</td>
+                                         </tr>";   
+                
+                                    // echo "emprestimos a seguir: ";
+                                    // echo $emprestimos;
+                                    // var_dump($emprestimos);
+                                    // echo "<br>";
+
+                                    // echo "<p>".$emprestimos['dt_retirada']."</p>    <td>     </td>";
+                                    // echo "</tr>";
+                                }
                             }
 
-
                         ?>
-
-
-
                     </table>
 
 
@@ -213,6 +238,6 @@
 
 <?php
 
-require_once('footer.php');
+    require_once('footer.php');
 
 ?>

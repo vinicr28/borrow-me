@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-=======
 <?php
-
+    require "autentica.php";
     require 'funcoes-gerais.php';
     require 'funcoes-sql.php';
     require_once('../mockup/mock.php');
+    $currentCOD = $_GET['cod'];
+    echo $currentCOD;
 
     if  (isset($_GET['cod'])) {
 
@@ -17,7 +17,7 @@
             }
         }
     }
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -93,8 +93,12 @@
             <div class="price">
                 <p>A partir de: <?= $currentPost['price'] ?></p>
             </div>
-            <div class="button">
-                <button>Emprestar</button>
+            <div>
+                <form action="page_solicitar-emprestimo.php" method="GET">
+                    <input type="hidden" name="cCOD" value="<?php echo $currentCOD; ?>">
+                    
+                    <button type="submit" class="todos-botoes">Pegar Emprestado</button>
+                </form>
             </div>
             
         </main>
@@ -109,4 +113,3 @@
     require_once('footer.php');
 
 ?>
->>>>>>> f265853de339e3f4499def23bd706d5d530f10ca

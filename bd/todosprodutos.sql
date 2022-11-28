@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Nov-2022 às 02:08
+-- Tempo de geração: 28-Nov-2022 às 09:00
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -43,14 +43,14 @@ CREATE TABLE `todosprodutos` (
 --
 
 INSERT INTO `todosprodutos` (`cod`, `titulo`, `resumo`, `detalhes`, `categoria`, `preco`, `imagem`, `id_proprietario`) VALUES
-(1, 'Macbook 11', 'Lindo Macbook', 'super conservado, em total funcionamento', 'Games', '100', 0x6d6163626f6f6b2e6a7067, 1),
-(2, 'Kit Golf', 'Kit para 2 pessoas, conteúdo tacos, 5 bolas e 1 bolsa', 'Super bacana para quem gosta de Golf', 'Esportes', '50', 0x6b6974676f6c662e6a7067, 2),
-(3, 'Laptop da Xuxa', 'Lindo Laptop Moderno', 'Equipamento do futuro. Oportunidade Única!', 'Games', '3000', 0x6c6170746f70787578612e6a7067, 2),
-(4, 'Apartamento para Temporada', 'Duplex na Barra da Tijuca, no RJ', 'Lindo apartamento, com vista para o mar, e sol da manhã.', 'Acomodacao', '250', 0x6170746f6261727261726a2e6a7067, 2),
-(5, 'Luigis Mansion', 'Jogo Luigis Mansion para Switch', 'Mídia Física de Luigis Mansion', 'Games', '25', 0x6c75696769736d616e73696f6e2e6a7067, 2),
-(6, 'Carro Elétrico', 'Carro Elétrico da Apple', 'Incrível carro Futurista', 'Automoveis', '500', 0x636172726f6170706c652e6a7067, 4),
-(7, 'Moutain Bike', 'Montain Bike da marca Santa Cruz', 'Veloz e Furiosa!!! ❤ ', 'Esportes', '52', 0x62696b652e6a7067, 2),
-(8, 'Raquete ', 'Raquete Beach Tênis', 'Ótima raquete para uma tarde de beach tenis', 'Esportes', '35', 0x7261717565746574656e697370726169612e706e67, 3),
+(1, 'Moutain Bike', 'Montain Bike da marca Santa Cruz', 'Veloz e Furiosa!!! ❤ ', 'Esportes', '52', 0x62696b652e6a7067, 2),
+(2, 'Apartamento para Temporada', 'Duplex na Barra da Tijuca, no RJ', 'Lindo apartamento, com vista para o mar, e sol da manhã.', 'Acomodacao', '250', 0x6170746f6261727261726a2e6a7067, 2),
+(3, 'Carro Elétrico', 'Carro Elétrico da Apple', 'Incrível carro Futurista', 'Automoveis', '500', 0x636172726f6170706c652e6a7067, 4),
+(4, 'Macbook 11', 'Lindo Macbook', 'super conservado, em total funcionamento', 'Games', '100', 0x6d6163626f6f6b2e6a7067, 1),
+(5, 'Raquete ', 'Raquete Beach Tênis', 'Ótima raquete para uma tarde de beach tenis', 'Esportes', '35', 0x7261717565746574656e697370726169612e706e67, 3),
+(6, 'Notebok do Futuro', 'Lindo Laptop Moderno', 'Equipamento do futuro. Oportunidade Única!', 'Games', '3000', 0x6c6170746f70787578612e6a7067, 2),
+(7, 'Kit Golf', 'Kit para 2 pessoas, conteúdo tacos, 5 bolas e 1 bolsa', 'Super bacana para quem gosta de Golf', 'Esportes', '50', 0x6b6974676f6c662e6a7067, 2),
+(8, 'Luigis Mansion', 'Jogo Luigis Mansion para Switch', 'Mídia Física de Luigis Mansion', 'Games', '25', 0x6c75696769736d616e73696f6e2e6a7067, 2),
 (9, 'Videogame do futuro', 'Melhor video game do mundo.', 'Nintendo 64, lançamento previsto para 2023', 'Games', '1000', 0x6e696e74656e646f36342e77656270, 3);
 
 --
@@ -71,7 +71,7 @@ ALTER TABLE `todosprodutos`
 -- AUTO_INCREMENT de tabela `todosprodutos`
 --
 ALTER TABLE `todosprodutos`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Nov-2022 às 09:00
+-- Tempo de geração: 28-Nov-2022 às 19:28
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -46,7 +46,9 @@ INSERT INTO `todosemprestimos` (`log_transacao`, `id_proprietario`, `id_solicita
 (3, 2, 5, 7, '2022-11-11', '2022-11-29'),
 (4, 2, 1, 7, '2022-11-11', '2022-11-16'),
 (12, 2, 3, 1, '2022-11-29', '2022-11-30'),
-(13, 4, 3, 3, '2022-11-30', '2022-12-03');
+(13, 4, 3, 3, '2022-11-30', '2022-12-03'),
+(14, 2, 3, 2, '2022-11-16', '2022-11-29'),
+(15, 2, 6, 1, '2022-11-30', '2022-12-05');
 
 --
 -- Índices para tabelas despejadas
@@ -66,7 +68,7 @@ ALTER TABLE `todosemprestimos`
 -- AUTO_INCREMENT de tabela `todosemprestimos`
 --
 ALTER TABLE `todosemprestimos`
-  MODIFY `log_transacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `log_transacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

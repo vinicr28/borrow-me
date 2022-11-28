@@ -144,8 +144,10 @@
                                             <td class=\"tab-colunas\">".$emprestimos['log_transacao']."</td>
                                             <td class=\"tab-colunas\">".$emprestimos['cod_produto']."</td>
                                             <td class=\"tab-colunas\">".$item['titulo']."</td>
-                                            <td class=\"tab-colunas\">".$emprestimos['dt_retirada']."</td>
-                                            <td class=\"tab-colunas\">".$emprestimos['dt_devolucao']."</td>
+                                            <td class=\"tab-colunas\">
+                                                <input type=\"date\" placeholder=".$emprestimos['dt_retirada']." value=".$emprestimos['dt_retirada']." disabled='' ></td>
+                                            <td class=\"tab-colunas\">
+                                                <input type=\"date\" placeholder=".$emprestimos['dt_devolucao']." value=".$emprestimos['dt_devolucao']." disabled='' ></td>
                                             <td class=\"tab-colunas\">".$emprestimos['id_proprietario']."</td>
                                             <td class=\"tab-colunas\">R$ ".$item['preco'].",00</td>
                                          </tr>";   

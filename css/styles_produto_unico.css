@@ -54,18 +54,6 @@ main {
   font-weight: 700;
 }
 
-.button {
-  background-color: #F2B707;
-  color: black;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-  border-radius: 15px;
-  padding: 10px;
-  margin-bottom: 50px;
-  transition: 1.5ms;
-}
 
 .button:hover {
   transform: scale(1.05);

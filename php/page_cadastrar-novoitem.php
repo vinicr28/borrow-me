@@ -1,3 +1,9 @@
+<?php
+    require "autentica.php";
+    $currentID = $_SESSION['id'];
+    echo $currentID;
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -60,6 +66,7 @@
                     
                     <form class="principal__cadastro__formulario" action="funcoes-sql.php" method="POST">
                         <input type="hidden" name="acao" value="cadastraritem">
+                        <input type="hidden" name="cID" value="<?php echo $currentID; ?>">
                     
                         <fieldset class="principal__cadastro__formulario__fieldsets">
                             <div class="div-fieldsets__cadainfo">
@@ -72,11 +79,11 @@
                             </div>
                             <div class="div-fieldsets__cadainfo">
                                 <label>Detalhes</label>
-                                <input type="text" placeholder="Todas as informações sobre o item" name="detalhes"/>
+                                <input id="input-detalhes" type="text" placeholder="Todas as informações sobre o item" name="detalhes"/>
                             </div>
                             <div class="div-fieldsets__cadainfo">
                                 <label for="categoria">Categoria</label>
-                                <select id="categoria" name="categoria">
+                                <select id="categoria" name="categoria" >
                                     <option value="Automoveis">Automóveis</option>
                                     <option value="Games">Games</option>
                                     <option value="Esportes">Esportes</option>
@@ -85,7 +92,7 @@
                             </div>
                             <div class="div-fieldsets__cadainfo">
                                 <label>Preço da diária</label>
-                                <input type="text" placeholder="R$" name="preco" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                                <input id="input-preco" type="text" placeholder="R$" name="preco" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
                             </div>
                             <div class="div-fieldsets__cadainfo">
                                 <label>Foto do Produto</label>
@@ -96,7 +103,7 @@
 
                         </fieldset>
                         
-                        <div class="button_novoitem">
+                        <div id="button_novoitem">
                             <button type="submit" class="todos-botoes">
                                 Cadastrar
                             </button>

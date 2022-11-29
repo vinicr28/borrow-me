@@ -1,6 +1,15 @@
 <?php
     require "autentica.php";
     require "funcoes-sql.php";
+
+    $currentCOD = $_GET['cCOD'];
+    echo $currentCOD;
+    $sql = "SELECT * FROM todosprodutos WHERE cod = '$currentCOD' ";
+    $resposta = $conn_sql->query($sql);
+    $item = mysqli_fetch_assoc($resposta);
+    var_dump($item);
+    
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -70,46 +79,43 @@
                         <h2 class="titulosh2">Requisição</h2>
 
                         <form action="funcoes-sql.php" method="POST">
-                            
+                        <input type="hidden" name="acao" value="registraremprestimo">
+                        <input type="hidden" name="cCOD" value="<?php echo $currentCOD; ?>">
+                        <input type="hidden" name="cID" value="<?php echo $_SESSION['id'] ?>">    
+
                         <fieldset class="fields-requisicao" id="box-form-dadospessoais">
                             <legend class="titulosh3">Solicitante</legend>    
                             <div id="div-nome">
                                     <label>Nome</label><br>
-                                    <input type="text" placeholder="<?php echo $_SESSION['nome']; ?> " value="<?php echo $_SESSION['nome']; ?>" name="nome" disabled=""/>
+                                    <input type="text" placeholder="<?php echo $_SESSION['nome']; ?> " value="<?php echo $_SESSION['nome']; ?>" name="nome" disabled="">
                                 </div>
                                 <!-- -->
                                 <div id="div-cpf">
                                     <label>CPF</label><br>
-                                    <input type="text" placeholder="<?php echo $_SESSION['cpf']; ?> " value="<?php echo $_SESSION['cpf']; ?>" name="cpf" disabled=""/>  
+                                    <input type="text" placeholder="<?php echo $_SESSION['cpf']; ?> " value="<?php echo $_SESSION['cpf']; ?>" name="cpf" disabled="">  
                                 </div>
                                 <div id="div-email">
                                     <label>Email</label><br>
-                                    <input type="email" placeholder="<?php echo $_SESSION['email']; ?> " value="<?php echo $_SESSION['email']; ?>" name="email" disabled=""/>
+                                    <input type="email" placeholder="<?php echo $_SESSION['email']; ?> " value="<?php echo $_SESSION['email']; ?>" name="email" disabled="">
                                 </div>
                             </fieldset>
 
 
                             <fieldset class="fields-requisicao">
                                 <legend class="titulosh3">Dados da Requisição</legend>
-                                <div id="div-produto">
-                                    <label>Item</label>
-                                    <select name="categoria">
-                                        <?php
-                                            
-                                        ?>
+                                <div class="div-fieldsets__cadainfo" id="div-produto">
+                                    <label for="">Item</label><br>
+                                    <input class="inputs-produto" type="text" placeholder="<?php echo $item["titulo"]; ?>" value="<?php echo $item["titulo"]; ?>" name="titulo" disabled="">
 
+                                    <label for="">Informações</label><br>
+                                    <input class="inputs-produto" type="text" placeholder="<?php echo $item["resumo"]; ?>" value="<?php echo $item["subtitulo"]; ?>" name="subtitulo" disabled="">
 
+                                    <label for="">Detalhes</label><br>
+                                    <input class="inputs-produto" id="input-detalhes" type="text" placeholder="<?php echo $item["detalhes"]; ?>" value="<?php echo $item["detalhes"]; ?>" name="detalhes" disabled="">
 
+                                    <label for="">Valor</label><br>
+                                    <input class="inputs-produto" id="input-preco" type="" placeholder="R$ <?php echo $item["preco"]; ?>" value="<?php echo $item["preco"]; ?>" name="preco" disabled="">
 
-
-
-
-
-
-                                        <option value="Produto1">Produto 1</option>
-                                        <option value="Produto2">Produto 2</option>
-                                        <option value="Produto3">Produto 3</option>
-                                    </select>
                                 </div>
                         
                                 <div class="div-fieldsets__cadainfo">
@@ -121,7 +127,10 @@
                                     <input name="datadevolucao" type="date" required>
                                 </div>
                             </fieldset>
-                            <button type="submit" class="todos-botoes" id="btt-solicitar">Solicitar</a>
+
+                            <button type="submit" class="todos-botoes" id="btt-solicitar">
+                                Solicitar
+                            </button>
                         </form>
                     </div>
     

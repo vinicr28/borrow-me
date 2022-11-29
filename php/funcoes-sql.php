@@ -144,17 +144,20 @@
 
 
         case 'cadastraritem':
+            $currentID = $_POST['cID'];
             $inputTitulo = $_POST['titulo'];
             $inputResumo = $_POST['subtitulo'];
             $inputDetalhes = $_POST['detalhes'];
             $inputCategoria = $_POST['categoria'];
             $inputPreco = $_POST['preco'];
             $inputImagem = $_POST['foto'];
-            $currentID = $_SESSION['id'];
             echo $inputTitulo;
             
             $sql = "INSERT INTO todosprodutos (titulo, resumo, detalhes, categoria, preco, imagem, id_proprietario) VALUES ('{$inputTitulo}', '{$inputResumo}', '{$inputDetalhes}', '{$inputCategoria}', '{$inputPreco}', '{$inputImagem}', '{$currentID}' ) ";
+            echo $currentID;
+            echo $sql;
             $resposta = $conn_sql->query($sql);
+            echo $resposta;
 
             if($resposta==true){
                 echo 'Teste com resposta TRUE';
@@ -168,9 +171,12 @@
 
         
         case 'visualizaranuncio':
-            $currenteCOD = $_POST['cCOD'];
+            $currentCOD = $_GET['cCOD'];
+            echo "Função Visualizar Anúncio";
+            echo $currentCOD;
+            echo "Fim Impressão";
 
-            $sql = "SELECT * FROM todosprodutos WHERE cod = '$currenteCOD' ";
+            $sql = "SELECT * FROM todosprodutos WHERE cod = '$currentCOD' ";
             $resposta = $conn_sql->query($sql);
             $qtdReg = mysqli_num_rows($resposta);
             //$row = $resposta->fetch_object();
@@ -187,14 +193,47 @@
                 $imagem = $row['imagem'];
                 $idProprietario = $row['id_proprietario'];
                 
-
+                $currentCOD = $row;
+                //include './page_produto.php)';
                 header("Location: ./page_produto.php");
+                require "./page_produto.php";
             } 
             else {
-                header("Location: ./page_home.php");
+                //header("Location: ./page_home.php");
             }
 
             break;
+
+
+
+        case 'registraremprestimo':
+            $currentCOD = $_POST['cCOD'];
+            $dtRetirada = $_POST['dataretirada'];
+            $dtDevolucao = $_POST['datadevolucao'];
+            $idSolicitante = $_POST['cID'];
+            echo $currentCOD;
+
+            $sql = "SELECT * FROM todosprodutos WHERE cod = '$currentCOD' ";
+            $resposta = $conn_sql->query($sql);
+            $item = mysqli_fetch_assoc($resposta);
+            var_dump($item);
+
+            $idProprietario = $item['id_proprietario'];
+            
+
+            $sql = "INSERT INTO todosemprestimos (id_proprietario, id_solicitante, cod_produto, dt_retirada, dt_devolucao) VALUES ('{$idProprietario}', '{$idSolicitante}', '{$currentCOD}', '{$dtRetirada}', '{$dtDevolucao}' ) ";
+            $resposta = $conn_sql->query($sql);
+
+
+            if($resposta==true){
+                echo 'Teste com resposta TRUE';
+                header("Location: page_requisicaoconcluida-emprestimo.php");
+            }else{
+                echo 'Teste com resposta FALSE';
+                print "<script>alert('Desculpe, tivemos um problema. Tente novamente.');</script>";
+                header("Location: ./page_perfil.php");
+            }
+
 
 
 

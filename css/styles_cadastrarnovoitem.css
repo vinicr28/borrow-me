@@ -3,9 +3,18 @@
 }
 
 .div-fieldsets__cadainfo {
-    
-    display: block;
+    justify-content: space-between;
+    display: flex;
     width: 100%;
+}
+
+.div-fieldsets__cadainfo label {
+    width: 25%px;
+}
+
+.div-fieldsets__cadainfo input {
+    width: 70%;
+    
 }
 
 #categoria {
@@ -15,4 +24,18 @@
     border-radius: 20px;
     padding: 10px;
     margin-bottom: 5px;
+}
+
+#input-detalhes {
+    height: 100px;
+}
+
+#input-preco {
+    width: 30%;
+}
+
+#button_novoitem {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
 }

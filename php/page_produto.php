@@ -1,8 +1,10 @@
 <?php
-
+    require "autentica.php";
     require 'funcoes-gerais.php';
     require 'funcoes-sql.php';
     require_once('../mockup/mock.php');
+    $currentCOD = $_GET['cod'];
+    echo $currentCOD;
 
     if  (isset($_GET['cod'])) {
 
@@ -15,7 +17,7 @@
             }
         }
     }
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -62,8 +64,7 @@
                     <nav class="nav-menu">
                         <ul class="menu__lista">
                             <li class="menu__lista__item"><a href="page_home.php">Home</a></li>
-                            <li class="menu__lista__item"><a href="#principal__meusprodutos">Gerenciamento</a></li>
-                            <li class="menu__lista__item"><a href="#principal__novarequisicao">Nova Requisição</a></li>
+                            <li class="menu__lista__item"><a href="page_perfil.php">Perfil</a></li>
                             <li class="menu__lista__item"><a href="#">Suporte</a></li>
                         </ul>
                     </nav>
@@ -89,10 +90,14 @@
                 <p><?= $currentPost['description'] ?></p>
             </div>
             <div class="price">
-                <p>A partir de: <?= $currentPost['price'] ?></p>
+                <p>R$ <?= $currentPost['price'] ?></p>
             </div>
-            <div class="button">
-                <button>Emprestar</button>
+            <div>
+                <form action="page_solicitar-emprestimo.php" method="GET">
+                    <input type="hidden" name="cCOD" value="<?php echo $currentCOD; ?>">
+                    
+                    <button type="submit" class="todos-botoes">Pegar Emprestado</button>
+                </form>
             </div>
             
         </main>

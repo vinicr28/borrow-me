@@ -125,69 +125,69 @@
             
                 <div class="div-container__cards">
                     <div class="div-cards__item">
-                        <div class="div-cards__item__imagem" style="background-image: url('https://oakridgebikeshop.com/wp-content/uploads/2020/09/yellow-heckler-Edited.jpg');"></div>
+                        <div class="div-cards__item__imagem" style="background-image: url('../bd/bike.jpg');"></div>
                         <p class="cards__item__titulos">
                             Moutain Bike
                         </p>
                         <p class="cards__item__descricao">
                             Montain Bike da marca Santa Cruz
                         </p>
-                        <p class="cards__item__price">a partir de R$52,00</p>
+                        <p class="cards__item__price">R$52,00</p>
                         <button class="todos-botoes"><a href="./page_produto.php?cod=1">saiba mais</a></button>
                     </div>
                     <div class="div-cards__item">
-                        <div class="div-cards__item__imagem" style="background-image: url('https://casa.abril.com.br/wp-content/uploads/2019/09/2-apartamento-no-rio-e-moldura-para-praia-de-ipanema.png');"></div>
+                        <div class="div-cards__item__imagem" style="background-image: url('../bd/apartamentoipanema.png');"></div>
                         <p class="cards__item__titulos">
                             Apartamento de Luxo
                         </p>
                         <p class="cards__item__descricao">
                             Apartamento na Barra da Tijuca com 180m<sup>2</sup>
                         </p>
-                        <p class="cards__item__price">a partir de R$500,00</p>
+                        <p class="cards__item__price">R$500,00</p>
                         <button class="todos-botoes"><a href="./page_produto.php?cod=2">saiba mais</a></button>
                     </div>
                     <div class="div-cards__item">
-                        <div class="div-cards__item__imagem" style="background-image: url('https://conteudo.imguol.com.br/c/entretenimento/48/2020/09/25/apple-icar-1601057951463_v2_900x506.jpg');"></div>
+                        <div class="div-cards__item__imagem" style="background-image: url('../bd/carroapple.jpg');"></div>
                         <p class="cards__item__titulos">
                             Carro Elétrico Apple
                         </p>
                         <p class="cards__item__descricao">
                             Novo lançamento da Apple, carro eletrico!
                         </p>
-                        <p class="cards__item__price">a partir de R$1.350,00</p>
+                        <p class="cards__item__price">R$1.350,00</p>
                         <button class="todos-botoes"><a href="./page_produto.php?cod=3">saiba mais</a></button>
                     </div>
                     <div class="div-cards__item">
-                        <div class="div-cards__item__imagem" style="background-image: url('https://durhamcollege.ca/wp-content/uploads/Computer-Programmer.jpg');"></div>
+                        <div class="div-cards__item__imagem" style="background-image: url('../bd/novomac.jpg');"></div>
                         <p class="cards__item__titulos">
                             Macbook
                         </p>
                         <p class="cards__item__descricao">
                             Macbook Apple 2021
                         </p>
-                        <p class="cards__item__price">a partir de R$150,00</p>
+                        <p class="cards__item__price">R$150,00</p>
                         <button class="todos-botoes"><a href="./page_produto.php?cod=4">saiba mais</a></button>
                     </div>
                     <div class="div-cards__item">
-                        <div class="div-cards__item__imagem" style="background-image: url('https://images-americanas.b2w.io/produtos/4806681950/imagens/raquete-beach-tennis-klo22-em-fibra-de-vidro-kallango/4806681950_1_large.jpg');"></div>
+                        <div class="div-cards__item__imagem" style="background-image: url('../bd/raquetetenispraia.png');"></div>
                         <p class="cards__item__titulos">
                             Raquete Beach Tênis
                         </p>
                         <p class="cards__item__descricao">
                             Ótima raquete para uma tarde de beach tenis
                         </p>
-                        <p class="cards__item__price">a partir de R$35,00</p>
+                        <p class="cards__item__price">R$35,00</p>
                         <button class="todos-botoes"><a href="./page_produto.php?cod=5">saiba mais</a></button>
                     </div>
                     <div class="div-cards__item">
-                        <div class="div-cards__item__imagem" style="background-image: url('https://i.ytimg.com/vi/3zIJkCS07AE/maxresdefault.jpg');"></div>
+                        <div class="div-cards__item__imagem" style="background-image: url('../bd/notefuturo.jpg');"></div>
                         <p class="cards__item__titulos">
                             Notbook do Futuro
                         </p>
                         <p class="cards__item__descricao">
                             Melhor notebook do mundo
                         </p>
-                        <p class="cards__item__price">a partir de R$3.000,00</p>
+                        <p class="cards__item__price">R$3.000,00</p>
                         <button class="todos-botoes"><a href="./page_produto.php?cod=6">saiba mais</a></button>
                     </div>
                 </div>
